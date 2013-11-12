@@ -1,0 +1,1713 @@
+<!DOCTYPE html>
+<html class=" js no-flexbox canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths" lang="en"><!--<![endif]--><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="utf-8">
+
+<title>50 excuses to skip class: A guide to can't-miss activities this fall quarter</title>
+<style type="text/css">
+#wrapper img
+{
+	opacity:1.0;
+	filter:alpha(opacity=100); /* For IE8 and earlier */
+}
+
+#wrapper a img:hover
+{
+	opacity:0.7;
+	filter:alpha(opacity=50); /* For IE8 and earlier */
+}
+.credit{
+	font-size:0.8em;
+	text-align:right;
+}
+.pic{
+	text-align:right;
+}
+p.explain{
+	font-size:1.2em;
+}
+.row relative{
+	position: relative;
+}
+.hiddentext{
+	position: absolute;
+	right: 0;
+	padding-right:20px; /*keep hidden panel from running into right side of screen*/
+}
+.accordion-heading a.alpha, div.alpha{
+	margin-bottom: 0px;
+	border: 0px;
+	-webkit-border-radius: 0px;
+	-moz-border-radius: 0px;
+	border-radius: 0px;
+	padding: 0px 0px 0px 0px;
+}
+.accordion-inner a.beta, div.beta{
+	margin-bottom: 0px;
+	border: 0px;
+	-webkit-border-radius: 0px;
+	-moz-border-radius: 0px;
+	border-radius: 0px;
+	padding: 9px 0px;
+}
+
+#wrapper h2 > a, #wrapper h2 > a:hover {
+	color:black;
+	text-decoration:none;
+}
+
+/* Large desktop */
+@media (max-width: 960px)
+{
+	.extraInfo-desktop{
+		display:none;
+	}
+}
+
+</style>
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script id="facebook-jssdk" src="./opinion_files/all.js"></script><script src="./opinion_files/modernizr-2.5.3.min.js"></script>
+
+  <script src="./opinion_files/jquery.min.js"></script>
+  
+  
+<link rel="stylesheet" href="bootstrap.css">
+<link rel="stylesheet" href="bootstrap-responsive.css">
+<link rel="stylesheet" href="app.css">
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js?ver=3.4.2"></script>
+<script type="text/javascript" src="./opinion_files/plugins.js"></script>
+<script type="text/javascript" src="./opinion_files/main.js"></script>
+	<style type="text/css">
+.wp-polls .pollbar {
+	margin: 1px;
+	font-size: 8px;
+	line-height: 10px;
+	height: 10px;
+	background: #d8e1eb;
+	border: 1px solid #c8c8c8;
+}
+</style>
+	<link rel="canonical" href="./opinion_files/opinion.html">
+  
+	<script>
+	jQuery(document).ready(function() {
+		var top = $('div.span4.hiddentext').offset().top;
+		$(window).scroll(function () {
+			var scrollNow = $(this).scrollTop();
+			if(scrollNow > top) {
+				$('div.span4.hiddentext').css({'position':'fixed','top':'0', 'bottom':'auto'});
+			}
+			else {
+				$('div.span4.hiddentext').css({'position':'absolute', 'top':'auto','bottom':'auto'});
+			}
+
+			// stop the sidebar from running into the footer
+			var sidebar_height = $('div.span4.hiddentext').height();
+			var sidebar_position = $('div.span4.hiddentext').offset().top;
+			var footer_position = $('footer').offset().top;
+			
+			if((sidebar_height + sidebar_position+90) >= footer_position)
+			{
+				$('div.span4.hiddentext').css({'position':'fixed', 'bottom':$('footer').height(), 'top':'auto'});
+			}
+
+		});
+
+	/*
+		if ($(window).width()<960)
+		{
+			$('.accordion-toggle.alpha').click(function(e){
+				e.preventDefault();
+				var AEevent = $(this).attr('class');
+				$("."+AEevent).css('font-size','150%');
+			});
+		}*/
+
+		// Code targeting desktop browsers
+		if ($(window).width()>960)
+		{
+			$('#accordion2 [data-toggle="collapse"]').attr('data-toggle','');
+
+			$('.accordion-toggle.alpha').click(function(e){
+				e.preventDefault();
+				var idOfInfo = $(this).attr('href').substr(1);
+				var info = $('#'+idOfInfo).html();
+				$('#blurb').html(info);
+			});
+		}
+
+		$('[id^="location-"]').click(function(e)
+		{
+			console.log("handler fired");
+			e.preventDefault(); //ignores the href
+			var locationName = $(this).attr('id').substr(9);
+			console.log(locationName);
+			$('.activity').css('opacity','0.2');
+			$('[location-type="'+locationName+'"]').css('opacity','1.0');
+			console.log(locationName);
+			$('[id^="location-"]').css('color','#08C');
+			$(this).css('color','#000');
+		});
+
+		$('[id^="location-clear"]').click(function(e)
+		{
+			$('.activity').css('opacity','1.0');
+
+			$('[id^="location-"]').css('color','#08C');
+			$(this).css('color','#000');
+		});
+
+		//Pull in the ID category-something for each anchor tag, grab the substring and change all divs with the attribute category-type = something to be more opaque, while everything else is transparent
+		$('[id^="category-"]').click(function(e)
+		{
+			console.log("handler fired");
+			e.preventDefault(); //ignores the href
+			var categoryName = $(this).attr('id').substr(9);
+			console.log(categoryName);
+			$('.activity').css('opacity','0.2');
+			$('[category-type="'+categoryName+'"]').css('opacity','1.0');
+			$('[id^="category-"]').css('color','#08C');
+			$(this).css('color','#000');
+		});
+
+		$('[id^="category-clear"]').click(function(e)
+		{
+			$('.activity').css('opacity','1.0');
+
+			$('[id^="category-"]').css('color','#08C');
+			$(this).css('color','#000');
+		});
+
+		/*$('[id^="location-"]').click(function(e)
+		{
+			console.log("handler fired");
+			e.preventDefault(); //ignores the href
+			var locationName = $(this).attr('id');
+			console.log(locationName);
+			$('[class^="location-"]').css('opacity','0.2');
+			$("."+locationName).css('opacity','1.0');
+			$('[id^="location-"]').css('color','#08C');
+			$("#"+locationName).css('color','#000');
+		}); 
+
+		$('[id^="category-"]').click(function(e)
+		{
+			console.log("handler fired");
+			e.preventDefault(); //ignores the href
+			var categoryName = $(this).attr('id');
+			console.log(categoryName);
+			$('[class^="category-"]').css('opacity','0.2');
+			$("."+categoryName).css('opacity','1.0');
+			$('[id^="category-"]').css('color','#08C');
+			$("#"+categoryName).css('color','#000');
+		}); */
+
+		//$('[class^="location-"]').hide();
+		//$('.location-westwood').show();
+	});
+	</script>
+
+
+<style type="text/css">.fb_hidden{position:absolute;top:-10000px;z-index:10001}
+.fb_invisible{display:none}
+.fb_reset{background:none;border-spacing:0;border:0;color:#000;cursor:auto;direction:ltr;font-family:"lucida grande", tahoma, verdana, arial, sans-serif;font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal}
+.fb_link img{border:none}
+.fb_dialog{background:rgba(82, 82, 82, .7);position:absolute;top:-10000px;z-index:10001}
+.fb_dialog_advanced{padding:10px;-moz-border-radius:8px;-webkit-border-radius:8px;border-radius:8px}
+.fb_dialog_content{background:#fff;color:#333}
+.fb_dialog_close_icon{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yA/x/IE9JII6Z1Ys.png) no-repeat scroll 0 0 transparent;_background-image:url(http://static.ak.fbcdn.net/rsrc.php/v2/y6/x/s816eWC-2sl.gif);cursor:pointer;display:block;height:15px;position:absolute;right:18px;top:17px;width:15px;top:8px\9;right:7px\9}
+.fb_dialog_mobile .fb_dialog_close_icon{top:5px;left:5px;right:auto}
+.fb_dialog_padding{background-color:transparent;position:absolute;width:1px;z-index:-1}
+.fb_dialog_close_icon:hover{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yA/x/IE9JII6Z1Ys.png) no-repeat scroll 0 -15px transparent;_background-image:url(http://static.ak.fbcdn.net/rsrc.php/v2/y6/x/s816eWC-2sl.gif)}
+.fb_dialog_close_icon:active{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yA/x/IE9JII6Z1Ys.png) no-repeat scroll 0 -30px transparent;_background-image:url(http://static.ak.fbcdn.net/rsrc.php/v2/y6/x/s816eWC-2sl.gif)}
+.fb_dialog_loader{background-color:#f2f2f2;border:1px solid #606060;font-size:24px;padding:20px}
+.fb_dialog_top_left,
+.fb_dialog_top_right,
+.fb_dialog_bottom_left,
+.fb_dialog_bottom_right{height:10px;width:10px;overflow:hidden;position:absolute}
+.fb_dialog_top_left{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yR/x/8YeTNIlTZjm.png) no-repeat 0 0;left:-10px;top:-10px}
+.fb_dialog_top_right{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yR/x/8YeTNIlTZjm.png) no-repeat 0 -10px;right:-10px;top:-10px}
+.fb_dialog_bottom_left{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yR/x/8YeTNIlTZjm.png) no-repeat 0 -20px;bottom:-10px;left:-10px}
+.fb_dialog_bottom_right{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yR/x/8YeTNIlTZjm.png) no-repeat 0 -30px;right:-10px;bottom:-10px}
+.fb_dialog_vert_left,
+.fb_dialog_vert_right,
+.fb_dialog_horiz_top,
+.fb_dialog_horiz_bottom{position:absolute;background:#525252;filter:alpha(opacity=70);opacity:.7}
+.fb_dialog_vert_left,
+.fb_dialog_vert_right{width:10px;height:100%}
+.fb_dialog_vert_left{margin-left:-10px}
+.fb_dialog_vert_right{right:0;margin-right:-10px}
+.fb_dialog_horiz_top,
+.fb_dialog_horiz_bottom{width:100%;height:10px}
+.fb_dialog_horiz_top{margin-top:-10px}
+.fb_dialog_horiz_bottom{bottom:0;margin-bottom:-10px}
+.fb_dialog_iframe{line-height:0}
+.fb_dialog_content .dialog_title{background:#6d84b4;border:1px solid #3b5998;color:#fff;font-size:14px;font-weight:bold;margin:0}
+.fb_dialog_content .dialog_title > span{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yD/x/Cou7n-nqK52.gif)
+no-repeat 5px 50%;float:left;padding:5px 0 7px 26px}
+body.fb_hidden{-webkit-transform:none;height:100%;margin:0;left:-10000px;overflow:visible;position:absolute;top:-10000px;width:100%
+}
+.fb_dialog.fb_dialog_mobile.loading{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yc/x/3rhSv5V8j3o.gif)
+white no-repeat 50% 50%;min-height:100%;min-width:100%;overflow:hidden;position:absolute;top:0;z-index:10001}
+.fb_dialog.fb_dialog_mobile.loading.centered{max-height:590px;min-height:590px;max-width:500px;min-width:500px}
+#fb-root #fb_dialog_ipad_overlay{background:rgba(0, 0, 0, .45);position:absolute;left:0;top:0;width:100%;min-height:100%;z-index:10000}
+#fb-root #fb_dialog_ipad_overlay.hidden{display:none}
+.fb_dialog.fb_dialog_mobile.loading iframe{visibility:hidden}
+.fb_dialog_content .dialog_header{-webkit-box-shadow:white 0 1px 1px -1px inset;background:-webkit-gradient(linear, 0 0, 0 100%, from(#738ABA), to(#2C4987));border-bottom:1px solid;border-color:#1d4088;color:#fff;font:14px Helvetica, sans-serif;font-weight:bold;text-overflow:ellipsis;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0;vertical-align:middle;white-space:nowrap}
+.fb_dialog_content .dialog_header table{-webkit-font-smoothing:subpixel-antialiased;height:43px;width:100%
+}
+.fb_dialog_content .dialog_header td.header_left{font-size:12px;padding-left:5px;vertical-align:middle;width:60px
+}
+.fb_dialog_content .dialog_header td.header_right{font-size:12px;padding-right:5px;vertical-align:middle;width:60px
+}
+.fb_dialog_content .touchable_button{background:-webkit-gradient(linear, 0 0, 0 100%, from(#4966A6),
+color-stop(0.5, #355492), to(#2A4887));border:1px solid #29447e;-webkit-background-clip:padding-box;-webkit-border-radius:3px;-webkit-box-shadow:rgba(0, 0, 0, .117188) 0 1px 1px inset,
+rgba(255, 255, 255, .167969) 0 1px 0;display:inline-block;margin-top:3px;max-width:85px;line-height:18px;padding:4px 12px;position:relative}
+.fb_dialog_content .dialog_header .touchable_button input{border:none;background:none;color:#fff;font:12px Helvetica, sans-serif;font-weight:bold;margin:2px -12px;padding:2px 6px 3px 6px;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}
+.fb_dialog_content .dialog_header .header_center{color:#fff;font-size:16px;font-weight:bold;line-height:18px;text-align:center;vertical-align:middle}
+.fb_dialog_content .dialog_content{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yJ/x/jKEcVPZFk-2.gif) no-repeat 50% 50%;border:1px solid #555;border-bottom:0;border-top:0;height:150px}
+.fb_dialog_content .dialog_footer{background:#f2f2f2;border:1px solid #555;border-top-color:#ccc;height:40px}
+#fb_dialog_loader_close{float:left}
+.fb_dialog.fb_dialog_mobile .fb_dialog_close_button{text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}
+.fb_dialog.fb_dialog_mobile .fb_dialog_close_icon{visibility:hidden}
+.fb_iframe_widget{position:relative;display:-moz-inline-block;display:inline-block}
+.fb_iframe_widget iframe{position:absolute}
+.fb_iframe_widget_lift{z-index:1}
+.fb_iframe_widget span{position:relative;display:inline-block;vertical-align:text-bottom;text-align:justify}
+.fb_hide_iframes iframe{position:relative;left:-10000px}
+.fb_iframe_widget_loader{position:relative;display:inline-block}
+.fb_iframe_widget_fluid{display:inline}
+.fb_iframe_widget_loader iframe{min-height:32px;z-index:2;zoom:1}
+.fb_iframe_widget_loader .FB_Loader{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yJ/x/jKEcVPZFk-2.gif) no-repeat;height:32px;width:32px;margin-left:-16px;position:absolute;left:50%;z-index:4}
+.fb_button_simple,
+.fb_button_simple_rtl{background-image:url(http://static.ak.fbcdn.net/rsrc.php/v2/yH/x/eIpbnVKI9lR.png);background-repeat:no-repeat;cursor:pointer;outline:none;text-decoration:none}
+.fb_button_simple_rtl{background-position:right 0}
+.fb_button_simple .fb_button_text{margin:0 0 0 20px;padding-bottom:1px}
+.fb_button_simple_rtl .fb_button_text{margin:0 10px 0 0}
+a.fb_button_simple:hover .fb_button_text,
+a.fb_button_simple_rtl:hover .fb_button_text,
+.fb_button_simple:hover .fb_button_text,
+.fb_button_simple_rtl:hover .fb_button_text{text-decoration:underline}
+.fb_button,
+.fb_button_rtl{background:#29447e url(http://static.ak.fbcdn.net/rsrc.php/v2/yl/x/FGFbc80dUKj.png);background-repeat:no-repeat;cursor:pointer;display:inline-block;padding:0 0 0 1px;text-decoration:none;outline:none}
+.fb_button .fb_button_text,
+.fb_button_rtl .fb_button_text{background:#5f78ab url(http://static.ak.fbcdn.net/rsrc.php/v2/yl/x/FGFbc80dUKj.png);border-top:solid 1px #879ac0;border-bottom:solid 1px #1a356e;color:#fff;display:block;font-family:"lucida grande",tahoma,verdana,arial,sans-serif;font-weight:bold;padding:2px 6px 3px 6px;margin:1px 1px 0 21px;text-shadow:none}
+a.fb_button,
+a.fb_button_rtl,
+.fb_button,
+.fb_button_rtl{text-decoration:none}
+a.fb_button:active .fb_button_text,
+a.fb_button_rtl:active .fb_button_text,
+.fb_button:active .fb_button_text,
+.fb_button_rtl:active .fb_button_text{border-bottom:solid 1px #29447e;border-top:solid 1px #45619d;background:#4f6aa3;text-shadow:none}
+.fb_button_xlarge,
+.fb_button_xlarge_rtl{background-position:left -60px;font-size:24px;line-height:30px}
+.fb_button_xlarge .fb_button_text{padding:3px 8px 3px 12px;margin-left:38px}
+a.fb_button_xlarge:active{background-position:left -99px}
+.fb_button_xlarge_rtl{background-position:right -268px}
+.fb_button_xlarge_rtl .fb_button_text{padding:3px 8px 3px 12px;margin-right:39px}
+a.fb_button_xlarge_rtl:active{background-position:right -307px}
+.fb_button_large,
+.fb_button_large_rtl{background-position:left -138px;font-size:13px;line-height:16px}
+.fb_button_large .fb_button_text{margin-left:24px;padding:2px 6px 4px 6px}
+a.fb_button_large:active{background-position:left -163px}
+.fb_button_large_rtl{background-position:right -346px}
+.fb_button_large_rtl .fb_button_text{margin-right:25px}
+a.fb_button_large_rtl:active{background-position:right -371px}
+.fb_button_medium,
+.fb_button_medium_rtl{background-position:left -188px;font-size:11px;line-height:14px}
+a.fb_button_medium:active{background-position:left -210px}
+.fb_button_medium_rtl{background-position:right -396px}
+.fb_button_text_rtl,
+.fb_button_medium_rtl .fb_button_text{padding:2px 6px 3px 6px;margin-right:22px}
+a.fb_button_medium_rtl:active{background-position:right -418px}
+.fb_button_small,
+.fb_button_small_rtl{background-position:left -232px;font-size:10px;line-height:10px}
+.fb_button_small .fb_button_text{padding:2px 6px 3px;margin-left:17px}
+a.fb_button_small:active,
+.fb_button_small:active{background-position:left -250px}
+.fb_button_small_rtl{background-position:right -440px}
+.fb_button_small_rtl .fb_button_text{padding:2px 6px;margin-right:18px}
+a.fb_button_small_rtl:active{background-position:right -458px}
+.fb_share_count_wrapper{position:relative;float:left}
+.fb_share_count{background:#b0b9ec none repeat scroll 0 0;color:#333;font-family:"lucida grande", tahoma, verdana, arial, sans-serif;text-align:center}
+.fb_share_count_inner{background:#e8ebf2;display:block}
+.fb_share_count_right{margin-left:-1px;display:inline-block}
+.fb_share_count_right .fb_share_count_inner{border-top:solid 1px #e8ebf2;border-bottom:solid 1px #b0b9ec;margin:1px 1px 0 1px;font-size:10px;line-height:10px;padding:2px 6px 3px;font-weight:bold}
+.fb_share_count_top{display:block;letter-spacing:-1px;line-height:34px;margin-bottom:7px;font-size:22px;border:solid 1px #b0b9ec}
+.fb_share_count_nub_top{border:none;display:block;position:absolute;left:7px;top:35px;margin:0;padding:0;width:6px;height:7px;background-repeat:no-repeat;background-image:url(http://static.ak.fbcdn.net/rsrc.php/v2/yP/x/bSOHtKbCGYI.png)}
+.fb_share_count_nub_right{border:none;display:inline-block;padding:0;width:5px;height:10px;background-repeat:no-repeat;background-image:url(http://static.ak.fbcdn.net/rsrc.php/v2/yL/x/i_oIVTKMYsL.png);vertical-align:top;background-position:right 5px;z-index:10;left:2px;margin:0 2px 0 0;position:relative}
+.fb_share_no_count{display:none}
+.fb_share_size_Small .fb_share_count_right .fb_share_count_inner{font-size:10px}
+.fb_share_size_Medium .fb_share_count_right .fb_share_count_inner{font-size:11px;padding:2px 6px 3px;letter-spacing:-1px;line-height:14px}
+.fb_share_size_Large .fb_share_count_right .fb_share_count_inner{font-size:13px;line-height:16px;padding:2px 6px 4px;font-weight:normal;letter-spacing:-1px}
+.fb_share_count_hidden .fb_share_count_nub_top,
+.fb_share_count_hidden .fb_share_count_top,
+.fb_share_count_hidden .fb_share_count_nub_right,
+.fb_share_count_hidden .fb_share_count_right{visibility:hidden}
+.fb_connect_bar_container div,
+.fb_connect_bar_container span,
+.fb_connect_bar_container a,
+.fb_connect_bar_container img,
+.fb_connect_bar_container strong{background:none;border-spacing:0;border:0;direction:ltr;font-style:normal;font-variant:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal;vertical-align:baseline}
+.fb_connect_bar_container{position:fixed;left:0 !important;right:0 !important;height:42px !important;padding:0 25px !important;margin:0 !important;vertical-align:middle !important;border-bottom:1px solid #333 !important;background:#3b5998 !important;z-index:99999999 !important;overflow:hidden !important}
+.fb_connect_bar_container_ie6{position:absolute;top:expression(document.compatMode=="CSS1Compat"? document.documentElement.scrollTop+"px":body.scrollTop+"px")}
+.fb_connect_bar{position:relative;margin:auto;height:100%;width:100%;padding:6px 0 0 0 !important;background:none;color:#fff !important;font-family:"lucida grande", tahoma, verdana, arial, sans-serif !important;font-size:13px !important;font-style:normal !important;font-variant:normal !important;font-weight:normal !important;letter-spacing:normal !important;line-height:1 !important;text-decoration:none !important;text-indent:0 !important;text-shadow:none !important;text-transform:none !important;white-space:normal !important;word-spacing:normal !important}
+.fb_connect_bar a:hover{color:#fff}
+.fb_connect_bar .fb_profile img{height:30px;width:30px;vertical-align:middle;margin:0 6px 5px 0}
+.fb_connect_bar div a,
+.fb_connect_bar span,
+.fb_connect_bar span a{color:#bac6da;font-size:11px;text-decoration:none}
+.fb_connect_bar .fb_buttons{float:right;margin-top:7px}
+.fb_edge_widget_with_comment{position:relative;*z-index:1000}
+.fb_edge_widget_with_comment span.fb_edge_comment_widget{position:absolute}
+.fb_edge_widget_with_comment span.fb_send_button_form_widget{z-index:1}
+.fb_edge_widget_with_comment span.fb_send_button_form_widget .FB_Loader{left:0;top:1px;margin-top:6px;margin-left:0;background-position:50% 50%;background-color:#fff;height:150px;width:394px;border:1px #666 solid;border-bottom:2px solid #283e6c;z-index:1}
+.fb_edge_widget_with_comment span.fb_send_button_form_widget.dark .FB_Loader{background-color:#000;border-bottom:2px solid #ccc}
+.fb_edge_widget_with_comment span.fb_send_button_form_widget.siderender
+.FB_Loader{margin-top:0}
+.fbpluginrecommendationsbarleft,
+.fbpluginrecommendationsbarright{position:fixed !important;bottom:0;z-index:999}
+/* @noflip */
+.fbpluginrecommendationsbarleft{left:10px}
+/* @noflip */
+.fbpluginrecommendationsbarright{right:10px}
+</style>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-28181852-9']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</head>
+
+<body class="page page-id-1313 page-template page-template-page-expectations-for-the-year-php logged-in top-navbar">
+
+<!-- facebook like button code -->
+<div id="fb-root" class=" fb_reset"><div style="position: absolute; top: -10000px; height: 0px; width: 0px; "><div><iframe id="fb_xdm_frame_http" name="fb_xdm_frame_http" src="./opinion_files/xd_arbiter.html"></iframe><iframe id="fb_xdm_frame_https" name="fb_xdm_frame_https" src="./opinion_files/xd_arbiter(1).html"></iframe></div><div><iframe style="display: none; " id="f3c53702f4" name="f3c53702f4" src="./opinion_files/oauth.html"></iframe></div></div></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=269701246422391";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+  <!--[if lt IE 7]><div class="alert">Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</div><![endif]-->
+
+    	<header>			
+			<div id="nameplate" class="row">
+				<div class="span3 hidden-phone" id="nameplate-todayspaper">
+					<span style="color: white;">Today's Paper</span>
+				</div>
+				<div class="span6" id="nameplate-image">
+					<a href=""><img src="./opinion_files/nameplate.png"></a>
+				</div>
+
+
+
+			</div><!-- end div#nameplate -->
+		</div><!-- end container -->
+	</header>
+	
+	<div id="firstnav-container-back" class="hidden-phone">
+	<div class="container" id="firstnav-container">
+		<nav class="row" id="firstnav">
+			<ul id="topMenu" class="navlist span12"><li class="menu-home"><a href="http://dailybruin.com">Home</a></li>
+<li class="menu-news"><a href="http://www.dailybruin.com/news" >News</a></li>
+<li class="menu-sports"><a href="http://www.dailybruin.com/sports">Sports</a></li>
+<li class="menu-opinion"><a href="http://www.dailybruin.com/opinion">Opinion</a></li>
+<li class="menu-ae"><a href="http://www.dailybruin.com/ae">A&amp;E</a></li>
+<li class="menu-blogs"><a href="http://www.dailybruin.com/blog">Blogs</a></li>
+<li class="menu-multimedia"><a href="http://www.dailybruin.com/multimedia">Multimedia</a></li>
+</ul>			
+		</nav><!-- end nav#firstnav -->
+	</div><!-- end div#firstnav-container -->
+	</div><!-- end div#firstnav-container-back -->
+	
+	<div class="container ad hidden-phone" style="margin-bottom:10px;">
+		<iframe id="ae976b13" name="ae976b13" src="./opinion_files/afr.html" framespacing="0" frameborder="no" scrolling="no" width="728" height="90">&lt;a href='http://www.oncampusweb.com/delivery/ck.php?n=afcf8f4b&amp;amp;cb=18971928374158792837213' target='_blank'&gt;&lt;img src='http://www.oncampusweb.com/delivery/avw.php?zoneid=129&amp;amp;cb=18971928374158792837213&amp;amp;n=afcf8f4b' border='0' alt='' /&gt;&lt;/a&gt;</iframe>
+<!-- 				<img src="http://placehold.it/728x90&text=ADVERTISEMENT" /> -->
+	</div>
+  
+    <div id="wrap" class="container" role="document">
+
+
+		<a href="http://graphics.dailybruin.com/reg2012/dorm.html">&laquo; Back to registration 2012 dorm room</a>
+
+<h1>50 excuses to skip class: A guide to can't-miss activities this fall quarter</h1>
+<br>
+<p class="explain" style="line-height:22px;"><a href="https://www.facebook.com/pages/Daily-Bruin-Arts-Entertainment/129351234388" class="visible-desktop"><img src="./fallevents_files/facebook-share.jpeg" style="float:right" /></A>Living and studying in one of the busiest cities in the world, UCLA students have entertainment at their fingertips. Concerts, movie screenings, restaurant openings &mdash; the opportunities are endless in Los Angeles. But what if you still can't figure out what to do? 
+	<br><br>The Daily Bruin's Arts &amp; Entertainment department sifted through countless activities and events to give you a handpicked guide for fall 2012. There's ideas for everyone, whether you are a brand-new freshman or a soon-to-be graduate. Of course, the Daily Bruin included classic Bruin traditions like getting an ice cream sandwich at Diddy Riese, as well as more obscure activities such as skating in a swimming pool-cum-ice rink. 
+	<br><br>With 50 listings below, you have exactly enough to make sure your next 10 weeks stay busy. And whenever you cross off events on the list below, be sure to <b>share your photos</b> at the <a href="https://www.facebook.com/pages/Daily-Bruin-Arts-Entertainment/129351234388" target="_blank" rel="nofollow">Daily Bruin Arts &amp; Entertainment Facebook page</a>. Now, you're ready for fall quarter.
+</p>
+<br>
+<p class="explain">Jump to a month: <a href="#sept">September</a> | <a href="#oct">October</a> | <a href="#nov">November</a> | <a href="#dec">December</a></p>
+<p class="explain">Filter by location: <a id="location-ucla" href="#">UCLA &amp; Westwood</a> | <a id="location-santamonica" href="#">Santa Monica</a> | <a id="location-westla" href="#">Greater Westside</a> | <a id="location-weho" href="#">West Hollywood &amp; Hollywood</a> | <a id="location-downtown" href="#">Downtown</a> | <a id="location-other" href="#">Other</a> | <a id="location-clear" href="#">Clear my selection</a></p>
+<p class="explain"><i>OR </i>Filter by category: <a id="category-recreation" href="#">Recreation</a> | <a id="category-music" href="#">Music</a> | <a id="category-tv" href="#">TV &amp; Film</a> | <a id="category-arts" href="#">Theater &amp; Arts</a> | <a id="category-food" href="#">Food &amp; Drink</a> | <a id="category-fashion" href="#">Fashion</a> | <a id="category-clear" href="#">Clear my selection</a></p>
+
+<div class="row relative" id="wrapper">
+	<div class="span8">
+		<div class="row relative">
+			<div class="span8">
+				<h2><a name="sept">September</a></h2><br>
+				<div class="row">
+					<div class="activity span2" location-type="downtown" category-type="food">
+						<div class="accordion" id="accordion2">
+							<div class="accordion-group alpha">
+    							<div class="accordion-heading">
+      								<a class="accordion-toggle alpha" data-toggle="collapse" data-parent="#accordion2" href="#collapse2">
+       			 						Sample the brews at L.A. Beer Week<p><img src="./fallevents_files/la-beer-week-cambria-griffith-courtesy.jpg"></p>
+      								</a>
+      								<div id="collapse2" class="accordion-body collapse">
+     		 							<div class="accordion-inner beta">
+      		  								<div class="extraInfo-desktop">
+      		  									<h3>Sample the brews at L.A. Beer Week</h3>
+      		  									<p></p><div class="pic"><img src="./fallevents_files/la-beer-week-cambria-griffith-courtesy.jpg"><br><div class="credit">Courtesy of Cambria Griffith</div></div><p></p>
+      		  								</div>
+      		  								<p><b>Dates: </b>Sept. 20-30 
+      		  									<br><b>Cost: </b>Prices vary by event
+      		  									<br><b>Where: </b>Locations vary by event<br>
+      		  									<br>It's a celebration of all things beer, from beer education to beer cuisine. Bars and restaurants all across Los Angeles are participating, and at the end of the week, the city brews a mean party with the 4th annual Los Angeles Beer Week Festival, where attendees are invited to taste creations from more than 70 different breweries.
+     										</p>
+     									</div>
+    								</div>
+   								</div>
+   							</div>
+						</div>
+					</div>
+					<div class="activity span2" location-type="ucla" category-type="music">
+						<div class="accordion" id="accordion2">
+							<div class="accordion-group alpha">
+    							<div class="accordion-heading">
+      								<a class="accordion-toggle alpha" data-toggle="collapse" data-parent="#accordion2" href="#collapse3">
+       			 						Dance at the Bruin Bash concert<p><img src="./fallevents_files/bruin-bash-file-photo.jpg"></p>
+      								</a>
+      								<div id="collapse3" class="accordion-body collapse">
+     		 							<div class="accordion-inner beta">
+     		 								<div class="extraInfo-desktop">
+      		  									<h3>Dance at the Bruin Bash concert</h3>
+      		  									<p></p><div class="pic"><img src="./fallevents_files/bruin-bash-file-photo.jpg"><br><div class="credit">Daily Bruin file photo</div></div><p></p>
+      		  								</div>
+      		  								<p><b>Date: </b>Sept. 23
+      		  									<br><b>Cost: </b>Free (with wristband)
+      		  									<br><b>Where: </b>UCLA Drake Stadium<br>
+      		  									<br>There's no better way to start the year than letting loose in Drake Stadium. Join the crowd of undergraduates as they flood the stands in anticipation of this year's performances from Chiddy Bang, Ra Ra Riot and Los Rakas.
+     										</p>
+     									</div>
+    								</div>
+   								</div>
+   							</div>
+						</div>
+					</div>
+					<div class="activity span2" location-type="weho" category-type="tv">
+						<div class="accordion" id="accordion2">
+							<div class="accordion-group alpha">
+    							<div class="accordion-heading">
+      								<a class="accordion-toggle alpha" data-toggle="collapse" data-parent="#accordion2" href="#collapse4">
+       			 						25th anniversary of "The Princess Bride"<p><img src="./fallevents_files/princess-bride-robin-wright-penn.jpg"></p>
+      								</a>
+      								<div id="collapse4" class="accordion-body collapse">
+     		 							<div class="accordion-inner beta">
+     		 								<div class="extraInfo-desktop">
+      		  									<h3>25th anniversary of "The Princess Bride"</h3>
+      		  									<p></p><div class="pic"><img src="./fallevents_files/princess-bride-robin-wright-penn.jpg"><br><div class="credit">Courtesy of Robin Wright Penn</div></div><p></p>
+      		  								</div>
+      		  								<p><b>Date: </b>Sept. 24
+      		  									<br><b>Cost: </b>$9 for students
+      		  									<br><b>Where: </b>Egyptian Theatre<br>6712 Hollywood Blvd., Los Angeles, CA 90028<br>
+      		  									<br>"Hello. My name is Inigo Montoya. You killed my father. Prepare to die." Can you believe that fans of this memorable speech and the film that it came from have enjoyed Westley's quest to save his love, Buttercup, for 25 years now? Celebrate this classic story of adventure and good fun with a 98-minute screening and following discussion with Cary Elwes (Westley), Carol Kane (Valerie) and Wallace Shawn (Vizzini).
+     										</p>
+     									</div>
+    								</div>
+   								</div>
+   							</div>
+						</div>
+					</div>
+					<div class="activity span2" location-type="ucla" category-type="arts">
+						<div class="accordion" id="accordion2">
+							<div class="accordion-group alpha">
+    							<div class="accordion-heading">
+      								<a class="accordion-toggle alpha" data-toggle="collapse" data-parent="#accordion2" href="#collapse5">
+       			 						Perform a skit at The Improv Space<p><img src="./fallevents_files/improv-space-christopher-shane-db.jpg"></p>
+      								</a>
+      								<div id="collapse5" class="accordion-body collapse">
+     		 							<div class="accordion-inner beta">
+     		 								<div class="extraInfo-desktop">
+      		  									<h3>Perform a skit at The Improv Space</h3>
+      		  									<p></p><div class="pic"><img src="./fallevents_files/improv-space-christopher-shane-db.jpg"><br><div class="credit">Christopher Shane/Daily Bruin</div></div><p></p>
+      		  								</div>
+      		  								<p><b>Dates: </b>Every Wednesday starting Sept. 26
+      		  									<br><b>Cost: </b>Free 
+      		  									<br><b>Where: </b>The Improv Space<br>954 Gayley Ave., Los Angeles, CA 90024<br>
+      		  									<br>Get silly and showoff your acting chops in the Wednesday night series "The Improv Sessions." Even if you've never acted a day in your life, that's what improv is for. Walk on stage and perform by yourself or join a group, but be prepared for a good time and some laughs.
+     										</p>
+     									</div>
+    								</div>
+   								</div>
+   							</div>
+						</div>
+					</div>
+					<div class="activity span2" location-type="ucla" category-type="food">
+						<div class="accordion" id="accordion2">
+							<div class="accordion-group alpha">
+    							<div class="accordion-heading">
+      								<a class="accordion-toggle alpha" data-toggle="collapse" data-parent="#accordion2" href="#collapse6">
+       			 						Eat a Diddy Riese ice cream sandwich<p><img src="./fallevents_files/diddy-tobo-flickr.jpg"></p>
+      								</a>
+      								<div id="collapse6" class="accordion-body collapse">
+     		 							<div class="accordion-inner beta">
+     		 								<div class="extraInfo-desktop">
+      		  									<h3>Eat a Diddy Riese ice cream sandwich</h3>
+      		  									<p></p><div class="pic"><img src="./fallevents_files/diddy-tobo-flickr.jpg"><br><div class="credit">Courtesy of Tobo via Flickr</div></div><p></p>
+      		  								</div>
+      		  								<p><b>Date: </b>Anytime
+      		  									<br><b>Cost: </b>$1.75 for a sandwich 
+      		  									<br><b>Where: </b>Diddy Riese<br>926 Broxton Ave., Westwood, CA 90024<br>
+      		  									<br>It's always amazing to see the never-ending line of people that wait outside of the ice cream shop's doors. For those who haven't tried it, it's a cookie sandwich wonderland at only $1.75 a pop. 
+     										</p>
+     									</div>
+    								</div>
+   								</div>
+   							</div>
+						</div>
+					</div>
+					<div class="activity span2" location-type="ucla" category-type="music">
+						<div class="accordion" id="accordion2">
+							<div class="accordion-group alpha">
+    							<div class="accordion-heading">
+      								<a class="accordion-toggle alpha" data-toggle="collapse" data-parent="#accordion2" href="#collapse7">
+       			 						Check out Arts in the Union 2012<p><img src="./fallevents_files/arts-student-union-file-photo.jpg"></p>
+      								</a>
+      								<div id="collapse7" class="accordion-body collapse">
+     		 							<div class="accordion-inner beta">
+     		 								<div class="extraInfo-desktop">
+      		  									<h3>Check out Arts in the Union 2012</h3>
+      		  									<p></p><div class="pic"><img src="./fallevents_files/arts-student-union-file-photo.jpg"><br><div class="credit">Daily Bruin file photo</div></div><p></p>
+      		  								</div>
+      		  								<p><b>Date: </b>Sept. 26
+      		  									<br><b>Cost: </b>Free
+      		  									<br><b>Where: </b>UCLA Ackerman Union<br>
+      		  									<br>Celebrate the official last day of summer vacation with Student Committee for the Arts at UCLA's and ASUCLA's concert featuring 18 student artists. Performers include Courtney Randall, The Internship, India Carney and campus a cappella groups. Experimental hip-hop, glitch and dubstep artist MiMOSA will headline the night.
+     										</p>
+     									</div>
+    								</div>
+   								</div>
+   							</div>
+						</div>
+					</div>
+					<div class="activity span2" location-type="ucla" category-type="tv">
+						<div class="accordion" id="accordion2">
+							<div class="accordion-group alpha">
+    							<div class="accordion-heading">
+      								<a class="accordion-toggle alpha" data-toggle="collapse" data-parent="#accordion2" href="#collapse8">
+       			 						Free sneak previews at Melnitz Movies<p><img src="./fallevents_files/the-brooklyn-brothers-melnitz.jpg"></p>
+      								</a>
+      								<div id="collapse8" class="accordion-body collapse">
+     		 							<div class="accordion-inner beta">
+     		 								<div class="extraInfo-desktop">
+      		  									<h3>Free sneak previews at Melnitz Movies</h3>
+      		  									<p></p><div class="pic"><img src="./fallevents_files/the-brooklyn-brothers-melnitz.jpg"><br><div class="credit">Credit: Oscilloscope Laboratories</div></div><p></p>
+      		  								</div>
+      		  								<p><b>Date: </b>Sept. 27 for "The Brooklyn Brothers Beat The Best"
+      		  									<br><b>Cost: </b>Free
+      		  									<br><b>Where: </b>UCLA James Bridges Theater<br>Melnitz Hall 1409<br>
+      		  									<br>Located just beyond the sculpture garden, Melnitz Hall is the best place to watch movies on campus with plush seats, surround sound and a widescreen display – it's the entire movie package! (Just without the popcorn.) Past showings have included foreign releases, Oscar-nominated shorts and sneak previews with the occasional appearance by cast members. Best part? It's free.
+     										</p>
+     									</div>
+    								</div>
+   								</div>
+   							</div>
+						</div>
+					</div>
+					<div class="activity span2" location-type="ucla" category-type="tv">
+						<div class="accordion" id="accordion2">
+							<div class="accordion-group alpha">
+    							<div class="accordion-heading">
+      								<a class="accordion-toggle alpha" data-toggle="collapse" data-parent="#accordion2" href="#collapse9">
+       			 						Nick Offerman's American Ham Tour<p><img src="./fallevents_files/nick-offerman-mike-mitchell-courtesy.jpg"></p>
+      								</a>
+      								<div id="collapse9" class="accordion-body collapse">
+     		 							<div class="accordion-inner beta">
+     		 								<div class="extraInfo-desktop">
+      		  									<h3>Nick Offerman's American Ham Tour</h3>
+      		  									<p></p><div class="pic"><img src="./fallevents_files/nick-offerman-mike-mitchell-courtesy.jpg"><br><div class="credit">Courtesy of Mike Mitchell</div></div><p></p>
+      		  								</div>
+      		  								<p><b>Date: </b>Sept. 29
+      		  									<br><b>Cost: </b>$32.95
+      		  									<br><b>Where: </b>UCLA Royce Hall<br>
+      		  									<br>You may know him as Ron Swanson, but the mustachioed woodworker Nick Offerman has more to offer than Swanson's Pyramid of Greatness or his love of bacon and smooth jazz. Offerman performs "American Ham," a comedy show that promises audience members stories, songs and tips for success – with minor nudity, of course. 
+     										</p>
+     									</div>
+    								</div>
+   								</div>
+   							</div>
+						</div>
+					</div>
+					<div class="activity span2" location-type="other" category-type="recreation">
+						<div class="accordion" id="accordion2">
+							<div class="accordion-group alpha">
+    							<div class="accordion-heading">
+      								<a class="accordion-toggle alpha" data-toggle="collapse" data-parent="#accordion2" href="#collapse10">
+       			 						Free Bruin admission at the L.A. County Fair<p><img src="./fallevents_files/la-county-fair-file-photo-db.jpg"></p>
+      								</a>
+      								<div id="collapse10" class="accordion-body collapse">
+     		 							<div class="accordion-inner beta">
+     		 								<div class="extraInfo-desktop">
+      		  									<h3>Free Bruin admission at the L.A. County Fair</h3>
+      		  									<p></p><div class="pic"><img src="./fallevents_files/la-county-fair-file-photo-db.jpg"><br><div class="credit">Daily Bruin file photo</div></div><p></p>
+      		  								</div>
+      		  								<p><b>Date: </b>Sept. 29
+      		  									<br><b>Cost: </b>Free
+      		  									<br><b>Where: </b>1101 W. McKinley Ave., Pomona, CA 91768<br>
+      		  									<br>If you haven't taken a trip to the fair grounds this summer, there's one last chance to indulge in deep-fried foods, carnival games and Ferris wheel rides. Simply download the coupon and show it on your phone for entrance. Don't forget to wear UCLA colors to show your Bruin pride!
+     										</p>
+     									</div>
+    								</div>
+   								</div>
+   							</div>
+						</div>
+					</div>
+					<div class="activity span2" location-type="weho" category-type="arts">
+						<div class="accordion" id="accordion2">
+							<div class="accordion-group alpha">
+    							<div class="accordion-heading">
+      								<a class="accordion-toggle alpha" data-toggle="collapse" data-parent="#accordion2" href="#collapse11">
+       			 						ARTmageddon during the 405 shutdown<p><img src="./fallevents_files/artmageddon-don-liebig-db.jpg"></p>
+      								</a>
+      								<div id="collapse11" class="accordion-body collapse">
+     		 							<div class="accordion-inner beta">
+     		 								<div class="extraInfo-desktop">
+      		  									<h3>ARTmageddon during the 405 shutdown</h3>
+      		  									<p></p><div class="pic"><img src="./fallevents_files/artmageddon-don-liebig-db.jpg"><br><div class="credit">Don Liebig/Daily Bruin</div></div><p></p>
+      		  								</div>
+      		  								<p><b>Dates: </b>Sept. 29-30
+      		  									<br><b>Cost: </b>Free
+      		  									<br><b>Where: </b>The Federal Bar (San Fernando Valley)<br>5303 Lankershim Blvd., North Hollywood, CA 91601<br>
+      		  									<br>In conjunction with Carmageddon and the closing of the 405, ARTmageddon invites you to explore your community in search of vibrant art exhibits, acrobatic dance performances and talented street musicians. Walk, bike or take public transportation and expand your artistic horizons. 
+     										</p>
+     									</div>
+    								</div>
+   								</div>
+   							</div>
+						</div>
+					</div>
+					<div class="activity span2" location-type="weho" category-type="arts">
+						<div class="accordion" id="accordion2">
+							<div class="accordion-group alpha">
+    							<div class="accordion-heading">
+      								<a class="accordion-toggle alpha" data-toggle="collapse" data-parent="#accordion2" href="#collapse12">
+       			 						11th Annual West Hollywood Book Fair<p><img src="./fallevents_files/weho-book-fair-joshua-barash-flickr-courtesy.jpg"></p>
+      								</a>
+      								<div id="collapse12" class="accordion-body collapse">
+     		 							<div class="accordion-inner beta">
+     		 								<div class="extraInfo-desktop">
+      		  									<h3>11th Annual West Hollywood Book Fair</h3>
+      		  									<p></p><div class="pic"><img src="./fallevents_files/weho-book-fair-joshua-barash-flickr-courtesy.jpg"><br><div class="credit">Courtesy of Joshua Barash via Flickr</div></div><p></p>
+      		  								</div>
+      		  								<p><b>Date: </b>Sept. 30
+      		  									<br><b>Cost: </b>Free
+      		  									<br><b>Where: </b>West Hollywood Library and West Hollywood Park<br> 625 N. San Vicente Blvd., West Hollywood, CA 90069<br>
+      		  									<br>Hit the books at the 11th annual West Hollywood Book Fair, which includes author panels, cooking demonstrations and writing workshops held at different stages. Our pick is the Eclectic Cafe, which is set to feature author discussions on street art and rock 'n' roll icons as well as a comedic twist on writing and literature in a Literary Death Match.
+     										</p>
+     									</div>
+    								</div>
+   								</div>
+   							</div>
+						</div>
+					</div>
+					<div class="activity span2" location-type="ucla" category-type="recreation">
+						<div class="accordion" id="accordion2">
+							<div class="accordion-group alpha">
+    							<div class="accordion-heading">
+      								<a class="accordion-toggle alpha" data-toggle="collapse" data-parent="#accordion2" href="#collapse13">
+       			 						Try Quidditch at UCLA team's first practice<p><img src="./fallevents_files/quidditch-erin-ng-db.jpg"></p>
+      								</a>
+      								<div id="collapse13" class="accordion-body collapse">
+     		 							<div class="accordion-inner beta">
+     		 								<div class="extraInfo-desktop">
+      		  									<h3>Try Quidditch at the UCLA team's first practice</h3>
+      		  									<p></p><div class="pic"><img src="./fallevents_files/quidditch-erin-ng-db.jpg"><br><div class="credit">Erin Ng/Daily Bruin senior staff</div></div><p></p>
+      		  								</div>
+      		  								<p><b>Date: </b>Sept. 30
+      		  									<br><b>Cost: </b>Free
+      		  									<br><b>Where: </b>UCLA Intramural Field<br>
+      		  									<br>If you've ever wondered how a team of students on brooms masters the art of Quidditch on the IM field, now is your chance to learn the tricks of the trade. The UCLA Quidditch team is hosting an open first practice for anyone even remotely curious, Potter fans or not!
+     										</p>
+     									</div>
+    								</div>
+   								</div>
+   							</div>
+						</div>
+					</div>
+				</div> <!-- ........................................ closes the row enclosing september .............................. -->
+
+				<h2><a name="oct">October</a></h2><br>
+				<div class="row">
+					<div class="activity span2" location-type="weho" category-type="recreation">
+						<div class="accordion" id="accordion2">
+							<div class="accordion-group alpha">
+    							<div class="accordion-heading">
+      								<a class="accordion-toggle alpha" data-toggle="collapse" data-parent="#accordion2" href="#collapse14">
+       			 						Halloween Haunts and the Chamber of Horrors<p><img src="./fallevents_files/Chamber-of-Horrors-Craig-T-Mathew_Mathew-Imaging.jpg"></p>
+      								</a>
+      								<div id="collapse14" class="accordion-body collapse">
+     		 							<div class="accordion-inner beta">
+      		  								<div class="extraInfo-desktop">
+      		  									<h3>Halloween Haunts and the Chamber of Horrors</h3>
+      		  									<p></p><div class="pic"><img src="./fallevents_files/Chamber-of-Horrors-Craig-T-Mathew_Mathew-Imaging.jpg"><br><div class="credit">Courtesy of Craig T. Mathew/Mathew Imaging</div></div><p></p>
+      		  								</div>
+      		  								<p><b>Dates: </b>Every Sunday, Wednesday, Thursday and Friday from Sept. 19 to Nov. 5 
+      		  									<br><b>Cost: </b>$15
+      		  									<br><b>Where: </b>The Hollywood Museum<br>1660 N. Highland Ave., Hollywood, CA 90028<br>
+      		  									<br>Hollywood's horror history is on display for those movie buffs and fright fanatics who like a good scare. Exhibits include Hannibal Lecter's original jail cell, figures of Freddy Krueger and Michael Meyers and even props from televesion shows such as "Dexter" and "The Walking Dead." 
+     										</p>
+     									</div>
+    								</div>
+   								</div>
+   							</div>
+						</div>
+					</div>
+					<div class="activity span2" location-type="downtown" category-type="recreation">
+						<div class="accordion" id="accordion2">
+							<div class="accordion-group alpha">
+    							<div class="accordion-heading">
+      								<a class="accordion-toggle alpha" data-toggle="collapse" data-parent="#accordion2" href="#collapse15">
+       			 						UCLA Night with the Los Angeles Dodgers<p><img src="./fallevents_files/dodgers-night-verndogs-flickr.jpg"></p>
+      								</a>
+      								<div id="collapse15" class="accordion-body collapse">
+     		 							<div class="accordion-inner beta">
+     		 								<div class="extraInfo-desktop">
+      		  									<h3>UCLA Night with the Los Angeles Dodgers</h3>
+      		  									<p></p><div class="pic"><img src="./fallevents_files/dodgers-night-verndogs-flickr.jpg"><br><div class="credit">Courtesy of Verndogs via Flickr</div></div><p></p>
+      		  								</div>
+      		  								<p><b>Date: </b>Oct. 1, against the San Francisco Giants
+      		  									<br><b>Cost: </b>Starts at $16 for UCLA students, faculty, alumni and family members
+      		  									<br><b>Where: </b>Dodger Stadium<br>1000 Elysian Park Ave., Los Angeles, CA 90012<br>
+      		  									<br>Whether you grew up with the Bay Area fog or underneath the Southern California sun, Dodger Stadium brings two opposing teams into one playing field as the Los Angeles Dodgers take on the San Francisco Giants. Who says rivalry can't be fun?
+     										</p>
+     									</div>
+    								</div>
+   								</div>
+   							</div>
+						</div>
+					</div>
+					<div class="activity span2" location-type="ucla" category-type="tv">
+						<div class="accordion" id="accordion2">
+							<div class="accordion-group alpha">
+    							<div class="accordion-heading">
+      								<a class="accordion-toggle alpha" data-toggle="collapse" data-parent="#accordion2" href="#collapse48">
+       			 						Try to sight a celebrity on campus<p><img src="./fallevents_files/celebrity-tim-bradbury-db.jpg"></p>
+      								</a>
+      								<div id="collapse48" class="accordion-body collapse">
+     		 							<div class="accordion-inner beta">
+     		 								<div class="extraInfo-desktop">
+      		  									<h3>Try to sight a celebrity on campus</h3>
+      		  									<p></p><div class="pic"><img src="./fallevents_files/celebrity-tim-bradbury-db.jpg"><br><div class="credit">Tim Bradbury/Daily Bruin senior staff</div></div><p></p>
+      		  								</div>
+      		  								<p><b>Date: </b>Anytime
+      		  									<br><b>Cost: </b>N/A
+      		  									<br><b>Where: </b>UCLA campus<br>
+      		  									<br>One of the perks of attending UCLA is that you are in the capital of entertainment and at a campus that has the architecture of East Coast universities. Movies and TV shows that have shot on location on campus include "90210," "Modern Family," "Parks and Recreation" and "Heroes." Always keep your eyes peeled whenever you're around Royce Quad!
+     										</p>
+     									</div>
+    								</div>
+   								</div>
+   							</div>
+						</div>
+					</div>
+					<div class="activity span2" location-type="ucla" category-type="arts">
+						<div class="accordion" id="accordion2">
+							<div class="accordion-group alpha">
+    							<div class="accordion-heading">
+      								<a class="accordion-toggle alpha" data-toggle="collapse" data-parent="#accordion2" href="#collapse16">
+       			 						Design a LARP with the UCLA Game Lab<p><img src="./fallevents_files/gamelab-larp-rei-estrada-db.jpg"></p>
+      								</a>
+      								<div id="collapse16" class="accordion-body collapse">
+     		 							<div class="accordion-inner beta">
+     		 								<div class="extraInfo-desktop">
+      		  									<h3>Design a LARP with the UCLA Game Lab</h3>
+      		  									<p></p><div class="pic"><img src="./fallevents_files/gamelab-larp-rei-estrada-db.jpg"><br><div class="credit">Rei Estrada/Daily Bruin senior staff</div></div><p></p>
+      		  								</div>
+      		  								<p><b>Dates: </b>Oct. 2 and 4
+      		  									<br><b>Cost: </b>Free
+      		  									<br><b>Where: </b>UCLA Game Lab<br>Broad Art Center 3252<br>
+      		  									<br>October is Live Action Role Playing month for the Game Lab, and to celebrate they are creating a LARP of their own for the Melrose Trading Post. Join in, act like fairies from outer space and share your ideas. No previous experience necessary. 
+     										</p>
+     									</div>
+    								</div>
+   								</div>
+   							</div>
+						</div>
+					</div>
+					<div class="activity span2" location-type="downtown" category-type="music">
+						<div class="accordion" id="accordion2">
+							<div class="accordion-group alpha">
+    							<div class="accordion-heading">
+      								<a class="accordion-toggle alpha" data-toggle="collapse" data-parent="#accordion2" href="#collapse17">
+       			 						Watch bands at Culture Collide Festival 2012<p><img src="./fallevents_files/culture-collide-marc-lemoine-courtesy.jpg"></p>
+      								</a>
+      								<div id="collapse17" class="accordion-body collapse">
+     		 							<div class="accordion-inner beta">
+     		 								<div class="extraInfo-desktop">
+      		  									<h3>Watch bands perform at Culture Collide Festival 2012</h3>
+      		  									<p></p><div class="pic"><img src="./fallevents_files/culture-collide-marc-lemoine-courtesy.jpg"><br><div class="credit">Courtesy of Marc Lemoine</div></div><p></p>
+      		  								</div>
+      		  								<p><b>Dates: </b>Oct. 4-7
+      		  									<br><b>Cost: </b>$20 (currently) 
+      		  									<br><b>Where: </b>Venues vary<br>
+      		  									<br>Rock out to bands from all over the world at FILTER Magazine's third annual Culture Collide Festival. Headliners include United States' own Zola Jesus and Of Montreal and United Kingdom's The Wombats and The Big Pink. The festival will host more than 50 artists from countries including Israel, Singapore, Argentina and Norway. This year also marks the first Culture Collide Creative Summit, a discussion panel about touring, record sales and the music and entertainment industries.
+     										</p>
+     									</div>
+    								</div>
+   								</div>
+   							</div>
+						</div>
+					</div>
+					<div class="activity span2" location-type="westla" category-type="recreation">
+						<div class="accordion" id="accordion2">
+							<div class="accordion-group alpha">
+    							<div class="accordion-heading">
+      								<a class="accordion-toggle alpha" data-toggle="collapse" data-parent="#accordion2" href="#collapse18">
+       			 						Visit Indiecade 2012 Festival Day<p><img src="./fallevents_files/indiecade-flickr-GARNET.jpg"></p>
+      								</a>
+      								<div id="collapse18" class="accordion-body collapse">
+     		 							<div class="accordion-inner beta">
+     		 								<div class="extraInfo-desktop">
+      		  									<h3>Indulge your inner gamer at Indiecade 2012 Festival Day</h3>
+      		  									<p></p><div class="pic"><img src="./fallevents_files/indiecade-flickr-GARNET.jpg"><br><div class="credit">Courtesy of G A R N E T via Flickr</div></div><p></p>
+      		  								</div>
+      		  								<p><b>Date: </b>Oct. 6
+      		  									<br><b>Cost: </b>$15 online, $20 at the door 
+      		  									<br><b>Where: </b>IndieCade Village<br>9300 Culver Blvd., Culver City, CA 90232<br>
+      		  									<br>Arcade and indie video games are on the rise and, you can be a part of it. Check out one of the gaming industry's largest conventions for low-budget games and speak with the creators and developers or test out the next big indie hit. Maybe you will even find inspiration for your own virtual creation.   
+     										</p>
+     									</div>
+    								</div>
+   								</div>
+   							</div>
+						</div>
+					</div>
+					<div class="activity span2" location-type="weho" category-type="recreation">
+						<div class="accordion" id="accordion2">
+							<div class="accordion-group alpha">
+    							<div class="accordion-heading">
+      								<a class="accordion-toggle alpha" data-toggle="collapse" data-parent="#accordion2" href="#collapse19">
+       			 						Hike to the Hollywood sign with friends<p><img src="./fallevents_files/hollywood-sign-the-city-project-flickr.jpg"></p>
+      								</a>
+      								<div id="collapse19" class="accordion-body collapse">
+     		 							<div class="accordion-inner beta">
+     		 								<div class="extraInfo-desktop">
+      		  									<h3>Grab some friends and hike to the Hollywood sign</h3>
+      		  									<p></p><div class="pic"><img src="./fallevents_files/hollywood-sign-the-city-project-flickr.jpg"><br><div class="credit">Courtesy of The City Project via Flickr</div></div><p></p>
+      		  								</div>
+      		  								<p><b>Date: </b>Anytime 
+      		  									<br><b>Cost: </b>Free
+      		  									<br><b>Where: </b>3204 Canyon Lake Drive, Hollywood, CA 90068<br>
+      		  									<br>Originally constructed in 1923 as "Hollywoodland" for a billboard advertisement promoting the land development, the sign has remained longer than its intended 10-year stay, making cameo appearances in movies, television shows and music videos. Take the scenic route and follow the trails in Griffith Park to reach the iconic Hollywood sign.
+     										</p>
+     									</div>
+    								</div>
+   								</div>
+   							</div>
+						</div>
+					</div>
+					<div class="activity span2" location-type="westla" category-type="tv">
+						<div class="accordion" id="accordion2">
+							<div class="accordion-group alpha">
+    							<div class="accordion-heading">
+      								<a class="accordion-toggle alpha" data-toggle="collapse" data-parent="#accordion2" href="#collapse20">
+       			 						Visit Venice for the Abbot Kinney Festival<p><img src="./fallevents_files/abbot-kinney-dublabrat-via-flickr.jpg"></p>
+      								</a>
+      								<div id="collapse20" class="accordion-body collapse">
+     		 							<div class="accordion-inner beta">
+     		 								<div class="extraInfo-desktop">
+      		  									<h3>Visit Venice for the Abbot Kinney Festival</h3>
+      		  									<p></p><div class="pic"><img src="./fallevents_files/abbot-kinney-dublabrat-via-flickr.jpg"><br><div class="credit">Courtesy of Dublabrat via Flickr</div></div><p></p>
+      		  								</div>
+      		  								<p><b>Date: </b>Oct. 7
+      		  									<br><b>Cost: </b>Free
+      		  									<br><b>Where: </b>Abbot Kinney Blvd., Los Angeles, CA 90291<br>
+      		  									<br>Explore Venice's Abbot Kinney Boulevard during the 26th annual Abbot Kinney Festival. The famous street will have food trucks, beer gardens and stages for live music in addition to its boutiques, cafes, art galleries and restaurants.
+     										</p>
+     									</div>
+    								</div>
+   								</div>
+   							</div>
+						</div>
+					</div>
+					<div class="activity span2" location-type="weho" category-type="music">
+						<div class="accordion" id="accordion2">
+							<div class="accordion-group alpha">
+    							<div class="accordion-heading">
+      								<a class="accordion-toggle alpha" data-toggle="collapse" data-parent="#accordion2" href="#collapse21">
+       			 						Explore the Ooh La L.A. Festival<p><img src="./fallevents_files/ooh-la-LA-James-Kelly-courtesy.jpg"></p>
+      								</a>
+      								<div id="collapse21" class="accordion-body collapse">
+     		 							<div class="accordion-inner beta">
+     		 								<div class="extraInfo-desktop">
+      		  									<h3>Explore the Ooh La L.A. Festival</h3>
+      		  									<p></p><div class="pic"><img src="./fallevents_files/ooh-la-LA-James-Kelly-courtesy.jpg"><br><div class="credit">Courtesy of James Kelly</div></div><p></p>
+      		  								</div>
+      		  								<p><b>Dates: </b>Oct. 11-13
+      		  									<br><b>Cost: </b>$10-$36.50
+      		  									<br><b>Where: </b>Venues vary (El Rey Theatre, Club Nokia, The Satellite)<br>
+      		  									<br>Celebrate and discover French music with KCRW and Goldenvoice's 4th annual electronic and indie pop, rock and folk music festival. The three-day event's lineup boasts French and English artists like bossa nova, New Wave-inspired band Nouvelle Vague, pop duo Tomorrow's World and electro-pop group Citizens! Lescop, Housse de Racket, Francois &amp; the Atlas Mountains, Chocolate Genius and -M- are also set to perform.
+     										</p>
+     									</div>
+    								</div>
+   								</div>
+   							</div>
+						</div>
+					</div>
+					<div class="activity span2" location-type="ucla" category-type="music">
+						<div class="accordion" id="accordion2">
+							<div class="accordion-group alpha">
+    							<div class="accordion-heading">
+      								<a class="accordion-toggle alpha" data-toggle="collapse" data-parent="#accordion2" href="#collapse23">
+       			 						Jazz musicians Vijay Iyer and Steve Coleman<p><img src="./fallevents_files/vijay-cap-ucla-courtesy.jpg"></p>
+      								</a>
+      								<div id="collapse23" class="accordion-body collapse">
+     		 							<div class="accordion-inner beta">
+     		 								<div class="extraInfo-desktop">
+      		  									<h3>Jazz musicians Vijay Iyer and Steve Coleman</h3>
+      		  									<p></p><div class="pic"><img src="./fallevents_files/vijay-cap-ucla-courtesy.jpg"><br><div class="credit">Credit: Center for the Art of Performance at UCLA</div></div><p></p>
+      		  								</div>
+      		  								<p><b>Date: </b>Oct. 14
+      		  									<br><b>Cost: </b>$15
+      		  									<br><b>Where: </b>UCLA Royce Hall<br>
+      		  									<br>Rising jazz musician Vijay Iyer will be joined by multiple performers including legendary saxophonist Steve Coleman for this night of soulful jazz and reverberating rhythm. 
+     										</p>
+     									</div>
+    								</div>
+   								</div>
+   							</div>
+						</div>
+					</div>
+					<div class="activity span2" location-type="ucla" category-type="tv">
+						<div class="accordion" id="accordion2">
+							<div class="accordion-group alpha">
+    							<div class="accordion-heading">
+      								<a class="accordion-toggle alpha" data-toggle="collapse" data-parent="#accordion2" href="#collapse24">
+       			 						Screen your video at Open Projector Night<p><img src="./fallevents_files/open-projector-night-hammer-museum-courtesy.jpg"></p>
+      								</a>
+      								<div id="collapse24" class="accordion-body collapse">
+     		 							<div class="accordion-inner beta">
+     		 								<div class="extraInfo-desktop">
+      		  									<h3>Screen your video at Open Projector Night</h3>
+      		  									<p></p><div class="pic"><img src="./fallevents_files/open-projector-night-hammer-museum-courtesy.jpg"><br><div class="credit">Courtesy of the Hammer Museum</div></div><p></p>
+      		  								</div>
+      		  								<p><b>Date: </b>Oct. 18
+      		  									<br><b>Cost: </b>Free
+      		  									<br><b>Where: </b>Hammer Museum<br>10899 Wilshire Blvd., Los Angeles, CA 90024<br>
+      		  									<br>Did you make the next YouTube video sensation? Are you the next Francis Ford Coppola or Christopher Nolan? Now's your chance to find out. The Hammer Museum will accept video submissions less than 10 minutes long for this contest and night of amateur film screenings. Any genre is acceptable, and all are welcome to laugh, cry and enjoy in the movie fun.  
+     										</p>
+     									</div>
+    								</div>
+   								</div>
+   							</div>
+						</div>
+					</div>
+					<div class="activity span2" location-type="westla" category-type="music">
+						<div class="accordion" id="accordion2">
+							<div class="accordion-group alpha">
+    							<div class="accordion-heading">
+      								<a class="accordion-toggle alpha" data-toggle="collapse" data-parent="#accordion2" href="#collapse25">
+       			 						Enjoy a night at Saturdays Off the 405<p><img src="./fallevents_files/saturdays-off-the-405-Joshua-Smelser-flickr.jpg"></p>
+      								</a>
+      								<div id="collapse25" class="accordion-body collapse">
+     		 							<div class="accordion-inner beta">
+     		 								<div class="extraInfo-desktop">
+      		  									<h3>Enjoy a night at Saturdays Off the 405</h3>
+      		  									<p></p><div class="pic"><img src="./fallevents_files/saturdays-off-the-405-Joshua-Smelser-flickr.jpg"><br><div class="credit">Courtesy of Joshua Smelser via Flickr</div></div><p></p>
+      		  								</div>
+      		  								<p><b>Date: </b>Oct. 20
+      		  									<br><b>Cost: </b>Free
+      		  									<br><b>Where: </b>J. Paul Getty Museum<br>1200 Getty Center Drive, Los Angeles, CA 90049<br>
+      		  									<br>Spend your Saturday night at the Getty Museum for the year's final installment of the Saturdays Off the 405 concert series with free live music, galleries and drinks. Check out experimental, darkwave electro-pop group Cold Cave, take an after-hours gallery tour, or pick up a Getty-tini from the cash bar. 
+     										</p>
+     									</div>
+    								</div>
+   								</div>
+   							</div>
+						</div>
+					</div>
+					<div class="activity span2" location-type="westla" category-type="food">
+						<div class="accordion" id="accordion2">
+							<div class="accordion-group alpha">
+    							<div class="accordion-heading">
+      								<a class="accordion-toggle alpha" data-toggle="collapse" data-parent="#accordion2" href="#collapse50">
+       			 						Get an ice cream cone at Sprinkles<p><img src="./fallevents_files/sprinkles-file-photo-jean-bai-db.jpg"></p>
+      								</a>
+      								<div id="collapse50" class="accordion-body collapse">
+     		 							<div class="accordion-inner beta">
+     		 								<div class="extraInfo-desktop">
+      		  									<h3>Get a cone at the Sprinkles ice cream shop</h3>
+      		  									<p></p><div class="pic"><img src="./fallevents_files/sprinkles-file-photo-jean-bai-db.jpg"><br><div class="credit">Daily Bruin file photo</div></div><p></p>
+      		  								</div>
+      		  								<p><b>Date: </b>Anytime
+      		  									<br><b>Cost: </b>approximately $3-10
+      		  									<br><b>Where: </b>9635 Little Santa Monica Blvd., Beverly Hills, CA 90210<br>
+      		  									<br>Sprinkles is famous for its cupcake confections, but the sweets shop also serves up ice cream. Pick up a scoop of blood orange sorbet, salty caramel or red velvet ice cream on your next cupcake run.
+     										</p>
+     									</div>
+    								</div>
+   								</div>
+   							</div>
+						</div>
+					</div>
+					<div class="activity span2" location-type="santamonica" category-type="recreation">
+						<div class="accordion" id="accordion2">
+							<div class="accordion-group alpha">
+    							<div class="accordion-heading">
+      								<a class="accordion-toggle alpha" data-toggle="collapse" data-parent="#accordion2" href="#collapse26">
+       			 						PARANOIA Haunted Attraction<p><img src="./fallevents_files/paranoia-www.califnornianightlife.jpg"></p>
+      								</a>
+      								<div id="collapse26" class="accordion-body collapse">
+     		 							<div class="accordion-inner beta">
+     		 								<div class="extraInfo-desktop">
+      		  									<h3>PARANOIA Haunted Attraction</h3>
+      		  									<p></p><div class="pic"><img src="./fallevents_files/paranoia-www.califnornianightlife.jpg"><br><div class="credit">Credit: CaliforniaNightlife</div></div><p></p>
+      		  								</div>
+      		  								<p><b>Date: </b>Every Thursday, Friday, Saturday and Sunday from Sept. 28 to Oct. 31; Monday to Wednesday of Halloween Week       		  									<br><b>Cost: </b>$19
+      		  									<br><b>Where: </b>Santa Monica Place<br>395 Santa Monica Blvd., Santa Monica, CA 90401<br>
+      		  									<br>Halloween haunts start early this year when Santa Monica Place transforms into three nightmarish mazes including “The Infirmary,” “Insomniac Clown Playhouse,” and “Granny’s Manor of Mayhem.” Dare to find your way through these terrifying obstacles all throughout the month of October.
+     										</p>
+     									</div>
+    								</div>
+   								</div>
+   							</div>
+						</div>
+					</div>
+				</div> <!-- .................................. closes the row enclosing october ..................... -->
+
+				<h2><a name="nov">November</a></h2><br>
+				<div class="row">
+					<div class="activity span2" location-type="weho" category-type="fashion">
+						<div class="accordion" id="accordion2">
+							<div class="accordion-group alpha">
+    							<div class="accordion-heading">
+      								<a class="accordion-toggle alpha" data-toggle="collapse" data-parent="#accordion2" href="#collapse27">
+       			 						Shop at Melrose Trading Post<p><img src="./fallevents_files/melrose-alonzo-flickr.jpg"></p>
+      								</a>
+      								<div id="collapse27" class="accordion-body collapse">
+     		 							<div class="accordion-inner beta">
+      		  								<div class="extraInfo-desktop">
+      		  									<h3>Shop at the Melrose Trading Post flea market</h3>
+      		  									<p></p><div class="pic"><img src="./fallevents_files/melrose-alonzo-flickr.jpg"><br><div class="credit">Courtesy of Alonzo via Flickr</div></div><p></p>
+      		  								</div>
+      		  								<p><b>Dates: </b>October to December
+      		  									<br><b>Cost: </b>$2 admission
+      		  									<br><b>Where: </b>Melrose Trading Post<br>7850 Melrose Ave., Los Angeles, CA 90046<br>
+      		  									<br>With food, music, clothing, art and antiques, this quaint shopping location offers new merchandise nearly every Sunday this Fall. Your investments even go toward the Los Angeles Unified School District, so there's no reason not to treat yourself this weekend. 
+     										</p>
+     									</div>
+    								</div>
+   								</div>
+   							</div>
+						</div>
+					</div>
+					<div class="activity span2" location-type="ucla" category-type="arts">
+						<div class="accordion" id="accordion2">
+							<div class="accordion-group alpha">
+    							<div class="accordion-heading">
+      								<a class="accordion-toggle alpha" data-toggle="collapse" data-parent="#accordion2" href="#collapse28">
+       			 						See a show at the Geffen Playhouse<p><img src="./fallevents_files/geffen-playhouse-rocor-flickr.jpg"></p>
+      								</a>
+      								<div id="collapse28" class="accordion-body collapse">
+     		 							<div class="accordion-inner beta">
+     		 								<div class="extraInfo-desktop">
+      		  									<h3>See a show at the Geffen Playhouse</h3>
+      		  									<p></p><div class="pic"><img src="./fallevents_files/geffen-playhouse-rocor-flickr.jpg"><br><div class="credit">Courtesy of Rocor via Flickr</div></div><p></p>
+      		  								</div>
+      		  								<p><b>Dates: </b>Oct. 9-Nov. 18
+      		  									<br><b>Cost: </b>Prices vary per show
+      		  									<br><b>Where: </b>10886 Le Conte Ave., Los Angeles, CA 90024<br>
+      		  									<br>Tucked away next to Ralph's on Le Conte Avenue, the quaint cottage-esque Geffen Playhouse is Westwood's go-to theater. With the theater season already underway, there's no better time to check out one of their Broadway shows or award-winning plays.
+     										</p>
+     									</div>
+    								</div>
+   								</div>
+   							</div>
+						</div>
+					</div>
+					<div class="activity span2" location-type="downtown" category-type="music">
+						<div class="accordion" id="accordion2">
+							<div class="accordion-group alpha">
+    							<div class="accordion-heading">
+      								<a class="accordion-toggle alpha" data-toggle="collapse" data-parent="#accordion2" href="#collapse29">
+       			 						Dance at HARD Haunted Mansion<p><img src="./fallevents_files/hard-la-Caesar-Sebastian-flickr.jpg"></p>
+      								</a>
+      								<div id="collapse29" class="accordion-body collapse">
+     		 							<div class="accordion-inner beta">
+     		 								<div class="extraInfo-desktop">
+      		  									<h3>Dance at HARD Haunted Mansion: Day of the Dead</h3>
+      		  									<p></p><div class="pic"><img src="./fallevents_files/hard-la-Caesar-Sebastian-flickr.jpg"><br><div class="credit">Courtesy of Caesar Sebastian via Flickr</div></div><p></p>
+      		  								</div>
+      		  								<p><b>Date: </b>Nov. 3
+      		  									<br><b>Cost: </b>$70
+      		  									<br><b>Where: </b>Los Angeles State Historic Park<br> 1245 N. Spring St., Los Angeles, CA 90013<br>
+      		  									<br>Keep in the spirit of Halloween and lose yourself in the music at HARD Haunted Mansion: Day of the Dead, an electronic music festival. Electronic duo Justice, house/dubstep duo Knife Party and Major Lazer headline the night, which boasts more than 25 artists on four stages.
+     										</p>
+     									</div>
+    								</div>
+   								</div>
+   							</div>
+						</div>
+					</div>
+					<div class="activity span2" location-type="ucla" category-type="recreation">
+						<div class="accordion" id="accordion2">
+							<div class="accordion-group alpha">
+    							<div class="accordion-heading">
+      								<a class="accordion-toggle alpha" data-toggle="collapse" data-parent="#accordion2" href="#collapse30">
+       			 						First basketball game at new Pauley Pavilion<p><img src="./fallevents_files/pauley-pavilion-isaac-arjonilla-db.jpg"></p>
+      								</a>
+      								<div id="collapse30" class="accordion-body collapse">
+     		 							<div class="accordion-inner beta">
+     		 								<div class="extraInfo-desktop">
+      		  									<h3>First basketball game at the new Pauley Pavilion</h3>
+      		  									<p></p><div class="pic"><img src="./fallevents_files/pauley-pavilion-isaac-arjonilla-db.jpg"><br><div class="credit">Isaac Arjonilla/Daily Bruin senior staff</div></div><p></p>
+      		  								</div>
+      		  								<p><b>Date: </b>Nov. 9, against Indiana State University
+      		  									<br><b>Cost: </b>$25 for a single-game ticket or $99 for an annual Den pass
+      		  									<br><b>Where: </b>UCLA Pauley Pavilion<br>
+      		  									<br>After a year of watching Pauley Pavilion being torn away and rebuilt, eager students can stop peering through the construction gates and finally cheer on the Bruin Basketball team from the bleachers. Join the rest of the student body as the doors open for what is sure to be an epic and unforgettable season! 
+     										</p>
+     									</div>
+    								</div>
+   								</div>
+   							</div>
+						</div>
+					</div>
+					<div class="activity span2" location-type="ucla" category-type="recreation">
+						<div class="accordion" id="accordion2">
+							<div class="accordion-group alpha">
+    							<div class="accordion-heading">
+      								<a class="accordion-toggle alpha" data-toggle="collapse" data-parent="#accordion2" href="#collapse31">
+       			 						Attend the Beat 'SC bonfire and rally<p><img src="./fallevents_files/beat-sc-bonfire-sidhaant-shah-db.jpg"></p>
+      								</a>
+      								<div id="collapse31" class="accordion-body collapse">
+     		 							<div class="accordion-inner beta">
+     		 								<div class="extraInfo-desktop">
+      		  									<h3>Attend the Beat 'SC bonfire and rally</h3>
+      		  									<p></p><div class="pic"><img src="./fallevents_files/beat-sc-bonfire-sidhaant-shah-db.jpg"><br><div class="credit">Sidhaant Shah/Daily Bruin senior staff</div></div><p></p>
+      		  								</div>
+      		  								<p><b>Date: </b>Nov. 15
+      		  									<br><b>Cost: </b>Free
+      		  									<br><b>Where: </b>UCLA Intramural Field<br>
+      		  									<br>The UCLA-USC rivalry is a classic spirit event on campus and one that calls for students to throw anything and everything into an astonishing 30-foot bonfire constructed in the middle of Wilson Plaza. Check out pre-show performances from UCLA dance teams and a cappella groups as they take the energy to another level. UCLA fight fight fight!
+     										</p>
+     									</div>
+    								</div>
+   								</div>
+   							</div>
+						</div>
+					</div>
+					<div class="activity span2" location-type="santamonica" category-type="recreation">
+						<div class="accordion" id="accordion2">
+							<div class="accordion-group alpha">
+    							<div class="accordion-heading">
+      								<a class="accordion-toggle alpha" data-toggle="collapse" data-parent="#accordion2" href="#collapse22">
+       			 						Pacific Park on the Santa Monica Pier<p><img src="./fallevents_files/santa-monica-pier-jean-bai-db.jpg"></p>
+      								</a>
+      								<div id="collapse22" class="accordion-body collapse">
+     		 							<div class="accordion-inner beta">
+     		 								<div class="extraInfo-desktop">
+      		  									<h3>Check out Pacific Park on the Santa Monica Pier</h3>
+      		  									<p></p><div class="pic"><img src="./fallevents_files/santa-monica-pier-jean-bai-db.jpg"><br><div class="credit">Jean Bai/Daily Bruin</div></div><p></p>
+      		  								</div>
+      		  								<p><b>Date: </b>Anytime
+      		  									<br><b>Cost: </b>Free admission, pay by attraction, $22.95 for all day
+      		  									<br><b>Where: </b>380 Santa Monica Pier, Santa Monica, CA 90401<br>
+      		  									<br>Who doesn't love a good carnival? Switch up your next trip to Santa Monica with a visit to the Pier's amusement park, Pacific Park. Take a spin on the iconic Pacific Wheel Ferris wheel (energy efficient, might we add), feel like a kid riding their oceanfront roller coaster or eat seaside at Bubba Gump Shrimp Company.
+     										</p>
+     									</div>
+    								</div>
+   								</div>
+   							</div>
+						</div>
+					</div>
+					<div class="activity span2" location-type="other" category-type="recreation">
+						<div class="accordion" id="accordion2">
+							<div class="accordion-group alpha">
+    							<div class="accordion-heading">
+      								<a class="accordion-toggle alpha" data-toggle="collapse" data-parent="#accordion2" href="#collapse32">
+       			 						Tailgate at the UCLA-USC football game<p><img src="./fallevents_files/tailgate-ucla-usc-isaac-arjonilla.jpg"></p>
+      								</a>
+      								<div id="collapse32" class="accordion-body collapse">
+     		 							<div class="accordion-inner beta">
+     		 								<div class="extraInfo-desktop">
+      		  									<h3>Tailgate at the UCLA-USC football game</h3>
+      		  									<p></p><div class="pic"><img src="./fallevents_files/tailgate-ucla-usc-isaac-arjonilla.jpg"><br><div class="credit">Isaac Arjonilla/Daily Bruin senior staff</div></div><p></p>
+      		  								</div>
+      		  								<p><b>Date: </b>Nov. 17
+      		  									<br><b>Cost: </b>$20 per car for parking and $99 for an annual Den pass
+      		  									<br><b>Where: </b>Rose Bowl<br>1001 Rose Bowl Drive, Pasadena, CA 91103<br>
+      		  									<br>If you've never spent a day on the UCLA golf course drinking ice-cold beer while barbecuing before a game, then you're missing out! Grab a few friends and drive over to the Rose Bowl in Pasadena where you guys can spend an afternoon relaxing, throwing around a football and sharing some good times before watching the rivalry game between UCLA and USC.
+     										</p>
+     									</div>
+    								</div>
+   								</div>
+   							</div>
+						</div>
+					</div>
+					<div class="activity span2" location-type="ucla" category-type="tv">
+						<div class="accordion" id="accordion2">
+							<div class="accordion-group alpha">
+    							<div class="accordion-heading">
+      								<a class="accordion-toggle alpha" data-toggle="collapse" data-parent="#accordion2" href="#collapse33">
+       			 						Catch a sneak peek movie on campus<p><img src="./fallevents_files/movie-premiere-file-photo-db.jpg"></p>
+      								</a>
+      								<div id="collapse33" class="accordion-body collapse">
+     		 							<div class="accordion-inner beta">
+     		 								<div class="extraInfo-desktop">
+      		  									<h3>Catch a sneak peek movie preview on campus</h3>
+      		  									<p></p><div class="pic"><img src="./fallevents_files/movie-premiere-file-photo-db.jpg"><br><div class="credit">Daily Bruin file photo</div></div><p></p>
+      		  								</div>
+      		  								<p><b>Dates: </b>Monthly
+      		  									<br><b>Cost: </b>Free
+      		  									<br><b>Where: </b>Locations vary<br>
+      		  									<br>Whether it's through the UCLA School of Theater, Film and Television or through one of the USAC student groups, UCLA is always putting on free movie screenings for students before the movies actually come out in theaters. Past movies have included "Paranormal Activity 3," "Men in Black 3" and "Law Abiding Citizen." Be there for the next sneak peak!
+     										</p>
+     									</div>
+    								</div>
+   								</div>
+   							</div>
+						</div>
+					</div>
+					<div class="activity span2" location-type="downtown" category-type="arts">
+						<div class="accordion" id="accordion2">
+							<div class="accordion-group alpha">
+    							<div class="accordion-heading">
+      								<a class="accordion-toggle alpha" data-toggle="collapse" data-parent="#accordion2" href="#collapse34">
+       			 						Browse exhibits at Downtown Art Walk<p><img src="./fallevents_files/downtown-artwalk-Qathryn-Brehm-courtesy.jpg"></p>
+      								</a>
+      								<div id="collapse34" class="accordion-body collapse">
+     		 							<div class="accordion-inner beta">
+     		 								<div class="extraInfo-desktop">
+      		  									<h3>Browse exhibits at Downtown Art Walk</h3>
+      		  									<p></p><div class="pic"><img src="./fallevents_files/downtown-artwalk-Qathryn-Brehm-courtesy.jpg"><br><div class="credit">Courtesy of Qathryn Brehm</div></div><p></p>
+      		  								</div>
+      		  								<p><b>Dates: </b>Second Thursday of every month
+      		  									<br><b>Cost: </b>Free
+      		  									<br><b>Where: </b>411 S. Main St., Los Angeles, CA 90013<br>
+      		  									<br>Discover local art with a self-guided tour around the streets of downtown Los Angeles. Local art galleries open their doors to crowds, and artists set up shop around different studios in the area. 
+     										</p>
+     									</div>
+    								</div>
+   								</div>
+   							</div>
+						</div>
+					</div>
+					<div class="activity span2" location-type="westla" category-type="recreation">
+						<div class="accordion" id="accordion2">
+							<div class="accordion-group alpha">
+    							<div class="accordion-heading">
+      								<a class="accordion-toggle alpha" data-toggle="collapse" data-parent="#accordion2" href="#collapse35">
+       			 						Jog from UCLA to the Playboy Mansion<p><img src="./fallevents_files/playboy-Shawn-Magill-flickr.jpg"></p>
+      								</a>
+      								<div id="collapse35" class="accordion-body collapse">
+     		 							<div class="accordion-inner beta">
+     		 								<div class="extraInfo-desktop">
+      		  									<h3>Jog the route from UCLA to the Playboy Mansion</h3>
+      		  									<p></p><div class="pic"><img src="./fallevents_files/playboy-Shawn-Magill-flickr.jpg"><br><div class="credit">Courtesy of Shawn Magill via Flickr</div></div><p></p>
+      		  								</div>
+      		  								<p><b>Date: </b>Anytime
+      		  									<br><b>Cost: </b>Free
+      		  									<br><b>Where: </b>10236 Charing Cross Road, Los Angeles, CA 90024<br>
+      		  									<br>Tired of the old perimeter run? Take a 6-mile jog down to Hugh Hefner's Playboy Mansion and catch a glimpse through the gates to see where all of Hollywood's debauchery goes down.
+     										</p>
+     									</div>
+    								</div>
+   								</div>
+   							</div>
+						</div>
+					</div>
+					<div class="activity span2" location-type="santamonica" category-type="food">
+						<div class="accordion" id="accordion2">
+							<div class="accordion-group alpha">
+    							<div class="accordion-heading">
+      								<a class="accordion-toggle alpha" data-toggle="collapse" data-parent="#accordion2" href="#collapse36">
+       			 						Santa Monica Farmers' Market<p><img src="./fallevents_files/farmers-market-file-photo-jim-summers.jpg"></p>
+      								</a>
+      								<div id="collapse36" class="accordion-body collapse">
+     		 							<div class="accordion-inner beta">
+     		 								<div class="extraInfo-desktop">
+      		  									<h3>Get veggies at the Santa Monica Farmers' Market</h3>
+      		  									<p></p><div class="pic"><img src="./fallevents_files/farmers-market-file-photo-jim-summers.jpg"><br><div class="credit">Daily Bruin file photo</div></div><p></p>
+      		  								</div>
+      		  								<p><b>Dates: </b>Wednesdays and Sundays
+      		  									<br><b>Cost: </b>Free (for entry)
+      		  									<br><b>Where: </b>Arizona Avenue (between 4th &amp; Ocean), Santa Monica, CA, 90401<br>
+      		  									<br>Tired of Trader Joe's and Ralphs? Head over to Santa Monica Farmers' Market for fresh almond butter, raw milk with sweetened honey and wild strawberries. It's a farmers' market with rows and rows of fresh fruits and vegetables like you have never seen!
+     										</p>
+     									</div>
+    								</div>
+   								</div>
+   							</div>
+						</div>
+					</div>
+					<div class="activity span2" location-type="weho" category-type="recreation">
+						<div class="accordion" id="accordion2">
+							<div class="accordion-group alpha">
+    							<div class="accordion-heading">
+      								<a class="accordion-toggle alpha" data-toggle="collapse" data-parent="#accordion2" href="#collapse37">
+       			 						Venture to Griffith Observatory at night<p><img src="./fallevents_files/griffith-observatory-file-photo-lauren-roberts-db.jpg"></p>
+      								</a>
+      								<div id="collapse37" class="accordion-body collapse">
+     		 							<div class="accordion-inner beta">
+     		 								<div class="extraInfo-desktop">
+      		  									<h3>Venture to Griffith Observatory at night</h3>
+      		  									<p></p><div class="pic"><img src="./fallevents_files/griffith-observatory-file-photo-lauren-roberts-db.jpg"><br><div class="credit">Daily Bruin file photo</div></div><p></p>
+      		  								</div>
+      		  								<p><b>Date: </b>Anytime
+      		  									<br><b>Cost: </b>Free
+      		  									<br><b>Where: </b>4730 Crystal Springs Drive, Los Angeles, CA 90027<br>
+      		  									<br>Situated atop Mount Hollywood, the Griffith Observatory has some of the best views of Los Angeles and the stars above. Use public telescopes or attend one of the star parties to view constellations with knowledgeable astronomers. The Observatory itself is an Angeleno icon, appearing in several films including "The Terminator" and "Rebel Without a Cause."
+     										</p>
+     									</div>
+    								</div>
+   								</div>
+   							</div>
+						</div>
+					</div>
+				</div> <!-- ................................... closes the row enclosing november ................................ -->
+
+				<h2><a name="dec">December</a></h2><br>
+				<div class="row">
+					<div class="activity span2" location-type="downtown" category-type="fashion">
+						<div class="accordion" id="accordion2">
+							<div class="accordion-group alpha">
+    							<div class="accordion-heading">
+      								<a class="accordion-toggle alpha" data-toggle="collapse" data-parent="#accordion2" href="#collapse38">
+       			 						Stop by the Unique L.A. design show<p><img src="./fallevents_files/unique-la-supahcute-com-flickr.jpg"></p>
+      								</a>
+      								<div id="collapse38" class="accordion-body collapse">
+     		 							<div class="accordion-inner beta">
+      		  								<div class="extraInfo-desktop">
+      		  									<h3>Browse jewelry and crafts at Unique L.A. design show</h3>
+      		  									<p></p><div class="pic"><img src="./fallevents_files/unique-la-supahcute-com-flickr.jpg"><br><div class="credit">Courtesy of Supahcute via Flickr</div></div><p></p>
+      		  								</div>
+      		  								<p><b>Dates: </b>Dec. 1-2
+      		  									<br><b>Cost: </b>$10 admission
+      		  									<br><b>Where: </b>California Market Center Penthouse<br> 110 E. 9th Street, Los Angeles, CA 90079<br>
+      		  									<br>Hunt for one-of-a-kind clothing and goods from more than 325 independent designers and artists at Unique L.A. Pick up free drinks and a tote bag and take part in do-it-yourself craft workshops during this two-day holiday show. Proceeds benefit GreenWish, a non-profit organization that benefits local green initiatives. 
+     										</p>
+     									</div>
+    								</div>
+   								</div>
+   							</div>
+						</div>
+					</div>
+					<div class="activity span2" location-type="westla" category-type="recreation">
+						<div class="accordion" id="accordion2">
+							<div class="accordion-group alpha">
+    							<div class="accordion-heading">
+      								<a class="accordion-toggle alpha" data-toggle="collapse" data-parent="#accordion2" href="#collapse39">
+       			 						Free kayaking in Marina del Rey<p><img src="./fallevents_files/kayak-Michael-Dorausch-flickr.jpg"></p>
+      								</a>
+      								<div id="collapse39" class="accordion-body collapse">
+     		 							<div class="accordion-inner beta">
+     		 								<div class="extraInfo-desktop">
+      		  									<h3>Free kayaking in Marina del Rey</h3>
+      		  									<p></p><div class="pic"><img src="./fallevents_files/kayak-Michael-Dorausch-flickr.jpg"><br><div class="credit">Courtesy of Michael Dorausch via Flickr</div></div><p></p>
+      		  								</div>
+      		  								<p><b>Date: </b>Anytime
+      		  									<br><b>Cost: </b>Free for 2 hours
+      		  									<br><b>Where: </b>UCLA Marina Aquatic Center<br> 14001 Fiji Way, Marina del Rey, CA 90292<br>
+      		  									<br>Just a quick 15-minute drive from UCLA, students can paddle like the pros do with free rentals from the Marina Aquatic Center. Explore the harbor and see if you can reach the inlet to the Pacific Ocean!
+     										</p>
+     									</div>
+    								</div>
+   								</div>
+   							</div>
+						</div>
+					</div>
+					<div class="activity span2" location-type="ucla" category-type="recreation">
+						<div class="accordion" id="accordion2">
+							<div class="accordion-group alpha">
+    							<div class="accordion-heading">
+      								<a class="accordion-toggle alpha" data-toggle="collapse" data-parent="#accordion2" href="#collapse40">
+       			 						Undie Run during Finals Week<p><img src="./fallevents_files/undie-run-file-photo-db.jpg"></p>
+      								</a>
+      								<div id="collapse40" class="accordion-body collapse">
+     		 							<div class="accordion-inner beta">
+     		 								<div class="extraInfo-desktop">
+      		  									<h3>Undie Run during Finals Week</h3>
+      		  									<p></p><div class="pic"><img src="./fallevents_files/undie-run-file-photo-db.jpg"><br><div class="credit">Daily Bruin file photo</div></div><p></p>
+      		  								</div>
+      		  								<p><b>Date: </b>Dec. 12
+      		  									<br><b>Cost: </b>free
+      		  									<br><b>Where: </b>UCLA Gayley Avenue/Strathmore Drive hill<br>
+      		  									<br>Finals got you down? Take an alternative campus jog in your undies. Students run to South Campus' Inverted Fountain and do an 8-clap in true school spirit. Now what to wear....?
+     										</p>
+     									</div>
+    								</div>
+   								</div>
+   							</div>
+						</div>
+					</div>
+					<div class="activity span2" location-type="ucla" category-type="recreation">
+						<div class="accordion" id="accordion2">
+							<div class="accordion-group alpha">
+    							<div class="accordion-heading">
+      								<a class="accordion-toggle alpha" data-toggle="collapse" data-parent="#accordion2" href="#collapse41">
+       			 						Ice skating at W Hotel in Westwood<p><img src="./fallevents_files/ice-skating-Dan4th-Nicholas-flickr.jpg"></p>
+      								</a>
+      								<div id="collapse41" class="accordion-body collapse">
+     		 							<div class="accordion-inner beta">
+     		 								<div class="extraInfo-desktop">
+      		  									<h3>Ice skating at W Hotel in Westwood</h3>
+      		  									<p></p><div class="pic"><img src="./fallevents_files/ice-skating-Dan4th-Nicholas-flickr.jpg"><br><div class="credit">Courtesy of Dan4th Nicholas via Flickr</div></div><p></p>
+      		  								</div>
+      		  								<p><b>Dates: </b>Nov. 16 - Jan. 3
+      		  									<br><b>Cost: </b>$10 for an hour of skating
+      		  									<br><b>Where: </b>W Hotel<br>930 Hilgard Ave., Los Angeles, CA 90024<br>
+      		  									<br>Swimming pool by summer, ice rink by winter – it's a hidden gem where students can rent skates for $10 an hour and practice their acrobatic skills on ice. Skaters can even take a break with a choice of sipping hot cocoa under the converted winter cabanas or ordering from the ice bar.
+     										</p>
+     									</div>
+    								</div>
+   								</div>
+   							</div>
+						</div>
+					</div>
+					<div class="activity span2" location-type="weho" category-type="arts">
+						<div class="accordion" id="accordion2">
+							<div class="accordion-group alpha">
+    							<div class="accordion-heading">
+      								<a class="accordion-toggle alpha" data-toggle="collapse" data-parent="#accordion2" href="#collapse42">
+       			 						Watch an Upright Citizens Brigade show<p><img src="./fallevents_files/upright-citizens-brigade-Marcin-Wichary-flickr.jpg"></p>
+      								</a>
+      								<div id="collapse42" class="accordion-body collapse">
+     		 							<div class="accordion-inner beta">
+     		 								<div class="extraInfo-desktop">
+      		  									<h3>Watch an Upright Citizens Brigade show</h3>
+      		  									<p></p><div class="pic"><img src="./fallevents_files/upright-citizens-brigade-Marcin-Wichary-flickr.jpg"><br><div class="credit">Courtesy of Marcin Wichary via Flickr</div></div><p></p>
+      		  								</div>
+      		  								<p><b>Dates: </b>Shows vary
+      		  									<br><b>Cost: </b>Free to $10 
+      		  									<br><b>Where: </b>5919 Franklin Ave., Hollywood, CA 90028<br>
+      		  									<br>Looking for cheap laughs? Upright Citizens Brigade Theatre is home to nightly, affordable comedy shows put on by comedians and the theatre's own improv students. Alumni from the New York- and Los Angeles-based venues include Amy Poehler ("Parks and Recreation, "Saturday Night Live"), Aziz Ansari ("Parks and Recreation," "Funny People") and Ed Helms ("The Office," "The Hangover").
+     										</p>
+     									</div>
+    								</div>
+   								</div>
+   							</div>
+						</div>
+					</div>
+					<div class="activity span2" location-type="weho" category-type="arts">
+						<div class="accordion" id="accordion2">
+							<div class="accordion-group alpha">
+    							<div class="accordion-heading">
+      								<a class="accordion-toggle alpha" data-toggle="collapse" data-parent="#accordion2" href="#collapse43">
+       			 						Grab your camera for a lomography shoot<p><img src="./fallevents_files/lomography-usetangerines-flickr.jpg"></p>
+      								</a>
+      								<div id="collapse43" class="accordion-body collapse">
+     		 							<div class="accordion-inner beta">
+     		 								<div class="extraInfo-desktop">
+      		  									<h3>Grab your camera for a lomography shoot with Lomography Gallery Store Los Angeles</h3>
+      		  									<p></p><div class="pic"><img src="./fallevents_files/lomography-usetangerines-flickr.jpg"><br><div class="credit">Courtesy of Usetangerines via Flickr</div></div><p></p>
+      		  								</div>
+      		  								<p><b>Date: </b>Anytime
+      		  									<br><b>Cost: </b>Tickets are $10 and include a presentation, lend-a-camera and a roll of film
+      		  									<br><b>Where: </b>7998 Santa Monica Blvd, West Hollywood, CA 90026<br>
+      		  									<br>You don't need to be a trained professional to shoot lomography photos. All you need is a weekend off and a trip to the Lomography Gallery Store in L.A.! The studio releases a schedule of workshops at the beginning of each month with shoots ranging from capturing the pillow fight in Pershing Square to experimenting with psychedelic color gels as the seasons change. All supplies provided!
+     										</p>
+     									</div>
+    								</div>
+   								</div>
+   							</div>
+						</div>
+					</div>
+					<div class="activity span2" location-type="santamonica" category-type="tv">
+						<div class="accordion" id="accordion2">
+							<div class="accordion-group alpha">
+    							<div class="accordion-heading">
+      								<a class="accordion-toggle alpha" data-toggle="collapse" data-parent="#accordion2" href="#collapse44">
+       			 						"The Rocky Horror Picture Show"<p><img src="./fallevents_files/The_Rocky_Horror_Picture_Show.jpg"></p>
+      								</a>
+      								<div id="collapse44" class="accordion-body collapse">
+     		 							<div class="accordion-inner beta">
+     		 								<div class="extraInfo-desktop">
+      		  									<h3>Dress up for "The Rocky Horror Picture Show" at Nuart Theatre</h3>
+      		  									<p></p><div class="pic"><img src="./fallevents_files/The_Rocky_Horror_Picture_Show.jpg"><br><div class="credit">Credit: 20th Century Fox</div></div><p></p>
+      		  								</div>
+      		  								<p><b>Dates: </b>Every Saturday night at 11:59 p.m.
+      		  									<br><b>Cost: </b>$10.50
+      		  									<br><b>Where: </b>11272 Santa Monica Blvd., West Los Angeles, CA 90025<br>
+      		  									<br>Grab a copy of the Daily Bruin and a roll of tissue paper because it's time for "The Rocky Horror Picture Show"! There's no better way to enjoy a cult classic than at a theater that has been running the theatrical version for more than 20 years. If you've loved the movie and watched it a thousand times, head over to the Nuart for some live action!
+     										</p>
+     									</div>
+    								</div>
+   								</div>
+   							</div>
+						</div>
+					</div>
+					<div class="activity span2" location-type="weho" category-type="recreation">
+						<div class="accordion" id="accordion2">
+							<div class="accordion-group alpha">
+    							<div class="accordion-heading">
+      								<a class="accordion-toggle alpha" data-toggle="collapse" data-parent="#accordion2" href="#collapse45">
+       			 						Make a trip to Mulholland Drive<p><img src="./fallevents_files/mulholland-Jeroen-Elfferich.jpg"></p>
+      								</a>
+      								<div id="collapse45" class="accordion-body collapse">
+     		 							<div class="accordion-inner beta">
+     		 								<div class="extraInfo-desktop">
+      		  									<h3>Check out the L.A. skyline from Mulholland Drive</h3>
+      		  									<p></p><div class="pic"><img src="./fallevents_files/mulholland-Jeroen-Elfferich.jpg"><br><div class="credit">Courtesy of Jeroen Elfferich</div></div><p></p>
+      		  								</div>
+      		  								<p><b>Date: </b>Anytime
+      		  									<br><b>Cost: </b>Free
+      		  									<br><b>Where: </b>Cahuenga Pass/Santa Monica Mountains<br> Mulholland Drive, Beverly Hills, CA 90210<br>
+      		  									<br>Not only is the 2001 psychological thriller inspired by this infamous road, Mulholland Drive is also one of the few places where people can see a breath-taking view of the entire Los Angeles skyline. Take a night drive up to the top and watch the city light up!
+     										</p>
+     									</div>
+    								</div>
+   								</div>
+   							</div>
+						</div>
+					</div>
+					<div class="activity span2" location-type="westla" category-type="recreation">
+						<div class="accordion" id="accordion2">
+							<div class="accordion-group alpha">
+    							<div class="accordion-heading">
+      								<a class="accordion-toggle alpha" data-toggle="collapse" data-parent="#accordion2" href="#collapse46">
+       			 						Walk around the La Brea Tar Pits<p><img src="./fallevents_files/la-brea-tar-pits-jim-summers-db.jpg"></p>
+      								</a>
+      								<div id="collapse46" class="accordion-body collapse">
+     		 							<div class="accordion-inner beta">
+     		 								<div class="extraInfo-desktop">
+      		  									<h3>Walk around the La Brea Tar Pits</h3>
+      		  									<p></p><div class="pic"><img src="./fallevents_files/la-brea-tar-pits-jim-summers-db.jpg"><br><div class="credit">Jim Summers/Daily Bruin</div></div><p></p>
+      		  								</div>
+      		  								<p><b>Date: </b>Anytime
+      		  									<br><b>Cost: </b>Free
+      		  									<br><b>Where: </b>5801 Wilshire Blvd., Los Angeles, CA 90036<br>
+      		  									<br>Leave "Jurassic Park" behind and see the real thing. Ice Age fossils nearly 40,000 years old await, including the remains of saber-toothed tigers, dire wolves and mammoths. With new discoveries made on a regular basis, you can experience the past first hand without even having to turn on a screen. 
+     										</p>
+     									</div>
+    								</div>
+   								</div>
+   							</div>
+						</div>
+					</div>
+					<div class="activity span2" location-type="santamonica" category-type="food">
+						<div class="accordion" id="accordion2">
+							<div class="accordion-group alpha">
+    							<div class="accordion-heading">
+      								<a class="accordion-toggle alpha" data-toggle="collapse" data-parent="#accordion2" href="#collapse47">
+       			 						Sign whiteboard at Blockheads<p><img src="./fallevents_files/Blockheads-credit-blockheads.jpg"></p>
+      								</a>
+      								<div id="collapse47" class="accordion-body collapse">
+     		 							<div class="accordion-inner beta">
+     		 								<div class="extraInfo-desktop">
+      		  									<h3>Sign your name on the whiteboard at Blockheads Shavery</h3>
+      		  									<p></p><div class="pic"><img src="./fallevents_files/Blockheads-credit-blockheads.jpg"><br><div class="credit">Credit: Blockheads</div></div><p></p>
+      		  								</div>
+      		  								<p><b>Date: </b>Anytime
+      		  									<br><b>Cost: </b>Free (shaved ice approximately $3-6)
+      		  									<br><b>Where: </b>11311 Mississippi Ave., Los Angeles, CA 90025<br>
+      		  									<br>Tucked away from the busy street of Sawtelle lies a small shop that serves one of the fluffiest shaved ice in the neighborhood. Available in flavors ranging from green tea to black sesame and fresh fruit to dessert toppings, Blockheads Shavery has definitely become a Bruin favorite.
+     										</p>
+     									</div>
+    								</div>
+   								</div>
+   							</div>
+						</div>
+					</div>
+					<div class="activity span2" location-type="weho" category-type="music">
+						<div class="accordion" id="accordion2">
+							<div class="accordion-group alpha">
+    							<div class="accordion-heading">
+      								<a class="accordion-toggle alpha" data-toggle="collapse" data-parent="#accordion2" href="#collapse49">
+       			 						Visit Amoeba Music in Hollywood<p><img src="./fallevents_files/amoeba-credit-Amoeba-Music.jpg"></p>
+      								</a>
+      								<div id="collapse49" class="accordion-body collapse">
+     		 							<div class="accordion-inner beta">
+     		 								<div class="extraInfo-desktop">
+      		  									<h3>Visit Amoeba Music in Hollywood</h3>
+      		  									<p></p><div class="pic"><img src="./fallevents_files/amoeba-credit-Amoeba-Music.jpg"><br><div class="credit">Credit: Amoeba Music</div></div><p></p>
+      		  								</div>
+      		  								<p><b>Date: </b>Anytime
+      		  									<br><b>Cost: </b>Free
+      		  									<br><b>Where: </b>6400 Sunset Blvd. Los Angeles, CA 90028<br>
+      		  									<br>Take a trip to this music mecca to pick up that rare vinyl or movie poster and browse through the store's large collection of independent music, movies and merchandise. Amoeba also holds free artist signings and live in-store performances. PJ Harvey, Cold War Kids,  Lana Del Rey, Robyn and Matisyahu have graced the Amoeba stage in the past. 
+     										</p>
+     									</div>
+    								</div>
+   								</div>
+   							</div>
+						</div>
+					</div>
+					<div class="activity span2" location-type="westla" category-type="arts">
+						<div class="accordion" id="accordion2">
+							<div class="accordion-group alpha">
+    							<div class="accordion-heading">
+      								<a class="accordion-toggle alpha" data-toggle="collapse" data-parent="#accordion2" href="#collapse51">
+       			 						Take photos at the LACMA lampposts<p><img src="./fallevents_files/lacma-lawrences-lenses-flickr.jpg"></p>
+      								</a>
+      								<div id="collapse51" class="accordion-body collapse">
+     		 							<div class="accordion-inner beta">
+     		 								<div class="extraInfo-desktop">
+      		  									<h3>Take a quintessential photo at the LACMA lampposts</h3>
+      		  									<p></p><div class="pic"><img src="./fallevents_files/lacma-lawrences-lenses-flickr.jpg"><br><div class="credit">Courtesy of Lawrence's Lenses via Flickr</div></div><p></p>
+      		  								</div>
+      		  								<p><b>Date: </b>Anytime
+      		  									<br><b>Cost: </b>Free
+      		  									<br><b>Where: </b>5905 Wilshire Blvd., Los Angeles, CA 90036<br>
+      		  									<br>You've seen them in music videos, in Facebook profile pictures and in movies like "No Strings Attached." The rows of magnificently towering "Urban Lights" at the Los Angeles County Museum of Art are quickly becoming one of the many iconic Los Angeles landmarks. Luckily, just a short bus ride away from campus. Grab a camera, a few friends and go on a shoot!
+     										</p>
+     									</div>
+    								</div>
+   								</div>
+   							</div>
+						</div>
+					</div>
+				</div> <!--closes the row enclosing december -->
+			</div> <!--close row relative for all the months (closes /span8)-->
+		</div>
+	</div> 
+
+	<div class="span4 hiddentext hidden-phone" id="blurb" style="position: absolute; top: auto; ">
+<h3>Click on an event to view more information</h3>    								</div>
+</div> <!--close row relative for the entire page (closes /row relative)-->
+
+		<p>Reporting by Lynn Chu, Jessica McQueen, Colin Reid and Anneta Konstantinides, Bruin senior staff.<br>Graphic by Byron Lutz and Kelly Zhou, Bruin senior staff.</p><br>
+
+
+  </div><!-- /#wrap -->
+
+    <footer id="content-info" role="contentinfo">
+        <!-- DB FOOTER -->
+        		<div class="container">
+			<img src="./opinion_files/nameplate-black.png" id="bottom-logo">
+			<span class="copyright">Content copyright © 2012 the Daily Bruin</span>
+		</div><!-- end div.container -->
+
+
+    <!-- END DB FOOTER -->
+  </footer>
+
+  <script type="text/javascript">
+/* <![CDATA[ */
+var pollsL10n = {"ajax_url":"http:\/\/db.localhost\/wp-admin\/admin-ajax.php","text_wait":"Your last request is still being processed. Please wait a while ...","text_valid":"Please choose a valid poll answer.","text_multiple":"Maximum number of choices allowed: ","show_loading":"0","show_fading":"1"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="./opinion_files/polls-js.js"></script>
+<script type="text/javascript" src="./opinion_files/base64.js"></script>
+<script type="text/javascript" src="./opinion_files/jquery.jplayer.min.js"></script>
+<script type="text/javascript" src="./opinion_files/audio.js"></script>
+  	<span style="clear:both;display:block;"></span>
+
+
+	<span style="clear:both;display:block;"></span>
+
+<link type="text/css" media="screen" href="./opinion_files/pp.css" rel="stylesheet"></body></html>

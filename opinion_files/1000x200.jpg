@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+
+  <title>Page not found | Daily Bruin</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="/js/vendor/modernizr-2.5.3.min.js"></script>
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="/js/vendor/jquery-1.7.2.min.js"><\/script>')</script>
+  
+	<link rel="shortcut icon" href="/img/favicon.ico"/>
+	
+	<link rel="apple-touch-icon" href="/img/apple-touch-icon-precomposed.png" />
+	<link rel="apple-touch-icon" sizes="72x72" href="/img/apple-touch-icon-72x72-precomposed.png" />
+	<link rel="apple-touch-icon" sizes="114x114" href="/img/apple-touch-icon-114x114-precomposed.png" />
+
+
+
+  
+	<link rel="alternate" type="application/rss+xml" title="Daily Bruin Feed" href="http://db.localhost/feed/">
+  <meta name='robots' content='noindex,nofollow' />
+<link rel="stylesheet" href="http://wpp.css?ver=3.4.2">
+<link rel="stylesheet" href="/css/bootstrap.css">
+<link rel="stylesheet" href="/css/bootstrap-responsive.css">
+<link rel="stylesheet" href="/css/app.css">
+<link rel="stylesheet" href="http://audio.css?ver=3.4.2">
+<link rel="stylesheet" href="/plugins/media-credit/css/media-credit.css?ver=1">
+<script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js?ver=3.4.2'></script>
+<script type='text/javascript' src='/plugins/dm-albums/galleria/galleria-1.2.6.min.js?ver=3.4.2'></script>
+<script type='text/javascript' src='/plugins/dm-albums/galleria/plugins/flickr/galleria.flickr.min.js?ver=3.4.2'></script>
+<script type='text/javascript' src='/plugins/dm-albums/javascript/galleria-common.js?ver=3.4.2'></script>
+<script type='text/javascript' src='/plugins/dm-albums/galleria/themes/classic/galleria.classic.min.js?ver=3.4.2'></script>
+<script type='text/javascript' src='/js/plugins.js'></script>
+<script type='text/javascript' src='/js/main.js'></script>
+<style type="text/css">
+.wp-polls .pollbar {
+	margin: 1px;
+	font-size: 8px;
+	line-height: 10px;
+	height: 10px;
+	background: #d8e1eb;
+	border: 1px solid #c8c8c8;
+}
+</style>
+  
+	<!-- Press Plus script -->  
+	<script type="text/javascript" src="http://s.ppjol.net/pp.js">{
+		'zone':"qnbBZ63hK_pL2086YoKj3J",
+		'mode':"meter",
+		'debug':0
+	}</script>
+
+
+</head>
+
+<body class="error404 logged-in top-navbar">
+
+<!-- facebook like button code -->
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=269701246422391";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+  <!--[if lt IE 7]><div class="alert">Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</div><![endif]-->
+
+    	<header>
+		<div class="container">
+			<div id="toplinks" class="row hidden-phone">
+				<ul id="toplinks-info" class="span6 navlist"><li class="menu-contact-us"><a href="/sample-page/">Contact Us</a></li>
+<li class="menu-staff"><a href="/sample-page/">Staff</a></li>
+<li class="menu-join-the-staff"><a href="/sample-page/">Join the Staff</a></li>
+<li class="menu-advertise"><a href="/sample-page/">Advertise</a></li>
+<li class="menu-privacy-policy"><a href="/sample-page/">Privacy Policy</a></li>
+<li class="menu-donate"><a href="/sample-page/">Donate</a></li>
+<li><a href='/feed/'><i class='smicon-rss'></i></a></li></ul>				</ul>
+				<div class="span3 offset3" id="toplinks-socialmedia">
+					We're also on  <a href="http://www.youtube.com/ucladailybruin"><i class="smicon-youtube"></i></a> <a href="http://www.twitter.com/dailybruin"><i class="smicon-twitter"></i></a> <a href="http://www.facebook.com/dailybruin"><i class="smicon-fb"></i></a>
+				</div>
+			</div><!-- end div#toplinks -->
+			
+			<div id="nameplate" class="row">
+				<div class="span3 hidden-phone" id="nameplate-todayspaper">
+					<span style="color: white;">Today's Paper</span>
+				</div>
+				<div class="span6" id="nameplate-image">
+					<a href=""><img src="/img/nameplate.png" /></a>
+					<button type="button" class="btn btn-navbar visible-phone" data-toggle="collapse" data-target="#mobile-nav">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+				</div>
+
+				<div class="span2 offset1 hidden-phone" id="nameplate-date">
+					<span class="nameplate-date-weather"><a href="#"><i class="wicon-sun"></i><span>92&deg;</span></a></span>
+					<span class="nameplate-date-week">Summer</span>
+					<span class="nameplate-date-today">September 23, 2012</span>
+				</div>
+
+			<nav id="mobile-nav" class="visible-phone nav-collapse collapse">
+				<ul id="menu-mobile-navigation" class="phone-nav"><li class="menu-home"><a href="/">Home</a></li>
+<li class="menu-news"><a href="/category/news/">News</a></li>
+<li class="menu-sports"><a href="/category/sports/">Sports</a></li>
+<li class="menu-opinion"><a href="/category/opinion/">Opinion</a></li>
+<li class="menu-ae"><a href="/category/ae/">a&#038;e</a></li>
+<li class="menu-blogs"><a href="/category/blogs/">Blogs</a></li>
+<li class="menu-prime"><a href="/category/prime/">Prime</a></li>
+</ul>			</nav>
+
+			</div><!-- end div#nameplate -->
+		</div><!-- end container -->
+	</header>
+	
+	<div id="firstnav-container-back" class="hidden-phone">
+	<div class="container" id="firstnav-container">
+		<nav class="row" id="firstnav">
+			<ul id="topMenu" class="navlist span12"><li class="menu-home"><a href="/">Home</a></li>
+<li class="menu-news dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">News <b class="caret"></b></a>
+<ul class="dropdown-menu">
+	<li class="menu-all-news-stories"><a href="/category/news/">All News Stories</a></li>
+	<li class="menu-a-closer-look"><a href="/category/news/a-closer-look/">A Closer Look</a></li>
+	<li class="menu-campus"><a href="/category/news/campus/">Campus</a></li>
+	<li class="menu-crime"><a href="/category/news/crime/">Crime</a></li>
+	<li class="menu-science-health"><a href="/category/news/science-health/">Science &#038; Health</a></li>
+	<li class="menu-student-government"><a href="/category/news/student-government/">Student Government</a></li>
+	<li class="menu-westwood"><a href="/category/news/westwood/">Westwood</a></li>
+</ul>
+</li>
+<li class="menu-sports dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Sports <b class="caret"></b></a>
+<ul class="dropdown-menu">
+	<li class="menu-all-sports-stories"><a href="/category/sports/">All Sports Stories</a></li>
+	<li class="menu-baseball"><a href="/category/sports/baseball/">Baseball</a></li>
+	<li class="menu-club-intramural-sports"><a href="/category/sports/club-intramural-sports/">Club &#038; Intramural Sports</a></li>
+	<li class="menu-football"><a href="/category/sports/football/">Football</a></li>
+	<li class="menu-gymnastics"><a href="/category/sports/gymnastics/">Gymnastics</a></li>
+	<li class="menu-mens-basketball"><a href="/category/sports/mens-basketball/">Men&#8217;s Basketball</a></li>
+	<li class="menu-mens-golf"><a href="/category/sports/mens-golf/">Men&#8217;s Golf</a></li>
+	<li class="menu-mens-tennis"><a href="/category/sports/mens-tennis/">Men&#8217;s Tennis</a></li>
+	<li class="menu-mens-volleyball"><a href="/category/sports/mens-volleyball/">Men&#8217;s Volleyball</a></li>
+	<li class="menu-rowing"><a href="/category/sports/rowing-sports/">Rowing</a></li>
+	<li class="menu-softball"><a href="/category/sports/softball/">Softball</a></li>
+	<li class="menu-swim-dive"><a href="/category/sports/swim-dive/">Swim &#038; Dive</a></li>
+	<li class="menu-track-and-field"><a href="/category/sports/track-and-field/">Track and Field</a></li>
+	<li class="menu-womens-basketball"><a href="/category/sports/womens-basketball/">Women&#8217;s Basketball</a></li>
+	<li class="menu-womens-golf"><a href="/category/sports/womens-golf/">Women&#8217;s Golf</a></li>
+	<li class="menu-womens-tennis"><a href="/category/sports/womens-tennis/">Women&#8217;s Tennis</a></li>
+	<li class="menu-womens-water-polo"><a href="/category/sports/womens-water-polo/">Women&#8217;s Water Polo</a></li>
+</ul>
+</li>
+<li class="menu-opinion dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Opinion <b class="caret"></b></a>
+<ul class="dropdown-menu">
+	<li class="menu-all-opinion-stories"><a href="/category/opinion/">All Opinion Stories</a></li>
+	<li class="menu-community"><a href="/category/opinion/community/">Community</a></li>
+	<li class="menu-editorial-cartoons"><a href="/category/opinion/editorial-cartoons/">Editorial Cartoons</a></li>
+	<li class="menu-editorials"><a href="/category/opinion/editorials/">Editorials</a></li>
+	<li class="menu-on-the-record"><a href="/category/opinion/on-the-record/">On the Record</a></li>
+	<li class="menu-opinion-columns"><a href="/category/opinion/opinion-columns/">Opinion Columns</a></li>
+	<li class="menu-polls"><a href="/category/opinion/polls/">Polls</a></li>
+</ul>
+</li>
+<li class="menu-ae dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">a&#038;e <b class="caret"></b></a>
+<ul class="dropdown-menu">
+	<li class="menu-all-ae-stories"><a href="/category/ae/">All a&#038;e Stories</a></li>
+	<li class="menu-ae-columns"><a href="/category/ae/ae-columns/">a&#038;e Columns</a></li>
+	<li class="menu-film-tv"><a href="/category/ae/film-tv/">Film &#038; TV</a></li>
+	<li class="menu-lifestyle"><a href="/category/ae/lifestyle/">Lifestyle</a></li>
+	<li class="menu-music"><a href="/category/ae/music/">Music</a></li>
+	<li class="menu-theather-arts"><a href="/category/ae/theather-arts/">Theather &#038; Arts</a></li>
+</ul>
+</li>
+<li class="menu-blogs dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Blogs <b class="caret"></b></a>
+<ul class="dropdown-menu">
+	<li class="menu-bruin-sights"><a href="/category/blogs/bruin-sights/">Bruin Sights</a></li>
+	<li class="menu-spotlight"><a href="/category/blogs/spotlight/">Spotlight</a></li>
+	<li class="menu-timestamp"><a href="/category/blogs/timestamp/">Timestamp</a></li>
+	<li class="menu-mojo"><a href="http://mojo.dailybruin.com">Mojo</a></li>
+</ul>
+</li>
+<li class="menu-multimedia"><a href="#">Multimedia</a></li>
+</ul>			<form class="firstnav-search input-append" role="search" method="get" action="">
+					<input name="s" id="search-input" type="text" placeholder="Search..." /><button class="btn" type="button"><i class="icon-search"></i></button>
+			</form>
+		</nav><!-- end nav#firstnav -->
+	</div><!-- end div#firstnav-container -->
+	</div><!-- end div#firstnav-container-back -->
+		
+	<div id="secondnav-container-back" class="hidden-phone">
+	<div class="container" id="secondnav-container">
+		<nav class="row" id="secondnav">
+			<span class="more_text">More:</span>
+			<ul id="menu-secondary-navigation" class="navlist span7"><li class="menu-prime-magazine"><a href="/category/prime/">Prime Magazine</a></li>
+<li class="menu-radio"><a href="#">Radio</a></li>
+<li class="menu-graphics"><a href="#">Graphics</a></li>
+<li class="menu-classifieds"><a href="#">Classifieds</a></li>
+</ul><!--
+			<ul class="navlist span7">
+				<li><a href="#">Prime Magazine</a></li>
+				<li><a href="#">Radio</a></li>
+				<li><a href="#">Graphics</a></li>
+				<li><a href="#">Classifieds</a></li>
+			</ul>
+-->
+			<div class="span4" id="secondnav-socialmedia"> 
+				<!-- put social media code here -->
+			</div>
+		</nav><!-- end nav#secondnav -->
+	</div><!-- end div#secondnav-container -->
+	</div><!-- end div#secondnav-container-back -->
+
+	<div class="container ad hidden-phone" style="margin-bottom:10px;">
+		<iframe id='ae976b13' name='ae976b13' src='http://www.oncampusweb.com/delivery/afr.php?zoneid=129&amp;cb=18971928374158792837213' framespacing='0' frameborder='no' scrolling='no' width='728' height='90'><a href='http://www.oncampusweb.com/delivery/ck.php?n=afcf8f4b&amp;cb=18971928374158792837213' target='_blank'><img src='http://www.oncampusweb.com/delivery/avw.php?zoneid=129&amp;cb=18971928374158792837213&amp;n=afcf8f4b' border='0' alt='' /></a></iframe>
+<!-- 				<img src="http://placehold.it/728x90&text=ADVERTISEMENT" /> -->
+	</div>
+  
+    <div id="wrap" class="container" role="document">
+<div class="row">
+	<div class="span8">
+        <div class="page-header">
+          <h1>File Not Found</h1>
+        </div><!-- end div.page-header -->
+        <div class="alert alert-block fade in">
+          <a class="close" data-dismiss="alert">&times;</a>
+          <p>The page you are looking for might have been removed, had its name changed, or is temporarily unavailable.</p>
+        </div><!-- end div.alert -->
+        <p>Please try the following:</p>
+        <ul>
+          <li>Check your spelling</li>
+          <li>Return to the <a href="http://db.localhost">home page</a></li>
+          <li>Click the <a href="javascript:history.back()">Back</a> button</li>
+        </ul>
+        <form role="search" method="get" id="searchform" class="form-search" action="http://db.localhost/">
+  <label class="hide-text" for="s">Search for:</label>
+  <input type="text" value="" name="s" id="s" class="search-query" placeholder="Search Daily Bruin">
+  <input type="submit" id="searchsubmit" value="Search" class="btn">
+</form>	</div><!-- end div.span8 -->
+      
+      	<aside class="span4" id="sidebar" role="complementary">
+		<div id="sidebar-inside">
+					<div class="visible-desktop" id="side-ad">
+									<iframe id='a1b65622' name='a1b65622' src='http://www.oncampusweb.com/delivery/afr.php?zoneid=162&amp;cb=893274237927328048530' framespacing='0' frameborder='no' scrolling='no' width='300' height='250'><a href='http://www.oncampusweb.com/delivery/ck.php?n=a04df0d6&amp;cb=893274237927328048530' target='_blank'><img src='http://www.oncampusweb.com/delivery/avw.php?zoneid=162&amp;cb=893274237927328048530&amp;n=a04df0d6' border='0' alt='' /></a></iframe>
+<!-- 				<img class="ad visible-desktop" src="http://placehold.it/300x250&text=ADVERTISEMENT" /> -->
+			</div>
+			
+			
+			<div id="sidebar-popular">
+				<div class="side-head">
+					<h2><a href="#" id="popular-select" class="activetab" data-target="side-info-popular"><i class="ticon-eye"></i>Popular</a> <a href="#" id="commented-select" data-target="side-info-commented"><i class="ticon-personchat"></i>Most commented</a><br style="display:block;float:left;clear:both" /></h2>
+				</div><!-- end div.side-head -->
+				<div class="side-info" id="side-info-popular">
+					<!-- Wordpress Popular Posts Plugin v2.3.2 [SC] [weekly] [custom] -->
+<ul class='side-popularlist' id='side-popularlist-popular'>
+<li> <a href="http://db.localhost/news/science-health/ucla-archaeologist-works-to-preserve-easter-island-statues/" title="UCLA archaeologist works to preserve Easter Island statues">UCLA archaeologist works to preserve Easter Island statues</a> <span class="wpp-comments">0 comment(s)</span> Comment(s)</li>
+</ul>
+<!-- End Wordpress Popular Posts Plugin v2.3.2 -->
+				</div>
+				<div class="side-info" id="side-info-commented">
+					<ul id="side-commented">
+												<li><a href="http://db.localhost/uncategorized/newblog-post/">newBLOG POST</a> <span class="dsq-postid" rel="69 ">2 Comments</span></li>
+													<li><a href="http://db.localhost/uncategorized/hello-world/">Hello world!</a> <span class="dsq-postid" rel="1 ">1 Comment</span></li>
+													<li><a href="http://db.localhost/sports/two-ucla-rowers-compete-with-the-usa-national-team-in-the-under-23-world-championships/">Two UCLA rowers compete with the USA national team in the Under-23 World Championships</a> <span class="dsq-postid" rel="21 ">1 Comment</span></li>
+													<li><a href="http://db.localhost/news/uc-regents-voice-support-for-gov-browns-tax-measure-at-board-meeting/">UC Regents voice support for Gov. Brown’s tax measure at board meeting</a> <span class="dsq-postid" rel="39 ">1 Comment</span></li>
+													<li><a href="http://db.localhost/news/ucla-alumna-cinthia-flores-appointed-as-2013-2014-student-regent/">UCLA alumna Cinthia Flores appointed as 2013-2014 student regent</a> <span class="dsq-postid" rel="34 ">0 Comments</span></li>
+												</ul>
+				</div><!-- end div#side-info-commented -->
+
+			</div><!-- end div#sidebar-popular -->
+
+		</div><!-- end div#sidebar-inside -->
+	</aside><!-- end aside#sidebar -->
+
+      
+      
+      
+</div><!-- end div.row -->
+
+  </div><!-- /#wrap -->
+
+    <footer id="content-info" role="contentinfo">
+        <!-- DB FOOTER -->
+        		<div class="container">
+			<img src="/img/nameplate-black.png" id="bottom-logo" />
+			<div class="row footer-nav">
+				<div class="footer-links span2">
+					<h3><a href=""></a></h3>
+					<ul>
+					<li>No categories</li>					</ul>
+					<h3><a href=""></a></h3>
+					<ul>
+					<li>No categories</li>					</ul>
+				</div>
+				<div class="footer-links span2">
+					<h3><a href="http://db.localhost/category/news/campus/">Campus</a></h3>
+					<ul>
+					<li>No categories</li>					</ul>
+				</div>
+				<div class="footer-links span2">
+					<h3><a href="http://db.localhost/category/blogs/">Blogs</a></h3>
+					<ul>
+						<li class="cat-item cat-item-65"><a href="/category/blogs/bruin-sights/" title="View all posts filed under Bruin Sights">Bruin Sights</a>
+</li>
+	<li class="cat-item cat-item-63"><a href="/category/blogs/spotlight/" title="View all posts filed under Spotlight">Spotlight</a>
+</li>
+	<li class="cat-item cat-item-64"><a href="/category/blogs/timestamp/" title="View all posts filed under Timestamp">Timestamp</a>
+</li>
+					</ul>
+					<h3><a href="http://db.localhost/category/sports/womens-golf/">Women's Golf</a></h3>
+					<ul>
+					<li>No categories</li>					</ul>
+				</div>
+				<div class="footer-links span2">
+					<h3><a href="http://db.localhost/category/news/a-closer-look/">A Closer Look</a></h3>
+					<h3><a href=""></a></h3>
+					<ul>
+					<li>No categories</li>					<li><a href="http://mojo.dailybruin.com">Mojo</a></li>
+					</ul>
+					<h3><a href="#">Classifieds</a></h3>
+					<h3>Share</h3>
+					<ul id="menu-share-links" class="menu"><li class="menu-facebook"><a href="http://www.facebook.com/dailybruin">Facebook</a></li>
+<li class="menu-twitter"><a href="http://www.twitter.com/dailybruin">Twitter</a></li>
+<li class="menu-youtube"><a href="http://www.youtube.com/ucladailybruin">YouTube</a></li>
+</ul>				</div>
+				<div class="footer-links span2">
+					<h3>About</h3>
+					<ul id="menu-about" class="menu"><li class="menu-contact-us"><a href="#">Contact Us</a></li>
+<li class="menu-staff"><a href="#">Staff</a></li>
+<li class="menu-join-the-staff"><a href="#">Join the Staff</a></li>
+<li class="menu-advertise"><a href="#">Advertise</a></li>
+<li class="menu-privacy-policy"><a href="#">Privacy Policy</a></li>
+</ul>				</div>
+				<div class="footer-links span2">
+				<section id="text-2" class="widget-1 widget-first widget widget_text"><div class="widget-inner">			<div class="textwidget"><p>This site made and maintained by the Daily Bruin online department.</p>
+<p><a href="mailto:online@media.ucla.edu">Leave us a message</a>, <a href="#">follow us on twitter</a>, or <a href="#">read our blog</a>.</p></div>
+		</div></section> 
+				</div>
+			</div>
+			<span class="copyright">Content copyright &copy; 2012 the Daily Bruin</span>
+		</div><!-- end div.container -->
+    
+    
+    <!-- END DB FOOTER -->
+  </footer>
+  
+  <script type='text/javascript'>
+/* <![CDATA[ */
+var pollsL10n = {"ajax_url":"http:\/\/db.localhost\/wp-admin\/admin-ajax.php","text_wait":"Your last request is still being processed. Please wait a while ...","text_valid":"Please choose a valid poll answer.","text_multiple":"Maximum number of choices allowed: ","show_loading":"0","show_fading":"1"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='/plugins/wp-polls/polls-js.js?ver=2.63'></script>
+<script type='text/javascript' src='/plugins/audio/js/base64.js?ver=3.4.2'></script>
+<script type='text/javascript' src='/plugins/audio/js/jquery.jplayer.min.js?ver=3.4.2'></script>
+<script type='text/javascript' src='/plugins/audio/js/audio.js?ver=3.4.2'></script>
+  	<span style="clear:both;display:block;"></span>
+
+</body>
+	<span style="clear:both;display:block;"></span>
+
+</html>

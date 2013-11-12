@@ -1,0 +1,40 @@
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+.container {
+  max-width: 480px;
+}
+.tab-content {
+  opacity: 0;
+}
+.flow-arrow {
+  display: block;
+  text-align: center;
+  font-size: 30px;
+  color: gray;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.accordion-group {
+  text-align: center;
+}
+.accordion-group .accordion-inner {
+  text-align: left;
+}
+.accordion-group .accordion-toggle:hover {
+  text-decoration: none;
+}
+.accordion-group .accordion-toggle [class^="icon-"],
+.accordion-group .accordion-toggle [class*=" icon-"],
+.accordion-group .accordion-toggle h3 {
+  font-size: 60px;
+  line-height: 60px;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+.accordion-group .accordion-toggle h3 {
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+  height: 66px;
+}
